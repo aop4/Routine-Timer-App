@@ -21,6 +21,7 @@
     "nativescript-iqkeyboardmanager": true,
     "nativescript-nodeify": true,
     "nativescript-social-share": true,
+    "nativescript-sound": true,
     "nativescript-theme-core": true,
     "nativescript-toast": true,
     "nativescript-ui-autocomplete": true,

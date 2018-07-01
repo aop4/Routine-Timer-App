@@ -1,15 +1,16 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit, OnDestroy } from "@angular/core";
 import { Router } from "@angular/router";
 import { Page } from "tns-core-modules/ui/page";
 import { Step } from "../shared/step/step.model";
 import { padTwoDigits } from "../util";
+import { AudioService } from "../shared/audio.service";
 
 @Component({
     selector: "tmr-step",
     templateUrl: "step/step.component.html",
     styleUrls: ["step/step.component.css"]
 })
-export class StepComponent {
+export class StepComponent implements OnInit, OnDestroy {
 
     @Input() step: Step;
     interval: number; //an ID for a JS interval
@@ -18,7 +19,7 @@ export class StepComponent {
     timerOn = false;
     padTwoDigits = padTwoDigits;
 
-    constructor(private page: Page) {
+    constructor(private page: Page, private audioService: AudioService) {
         
     }
 
@@ -27,23 +28,32 @@ export class StepComponent {
         this.seconds = this.step.seconds;
     }
 
-    updateClock(stepComponent: StepComponent) {
-        stepComponent.seconds -= 1;
-        if (stepComponent.seconds < 0) {
+    ngOnDestroy() {
+        this.audioService.stopAlarm();
+    }
+
+    handleTimerEnd() {
+        this.stopTimer();
+        this.audioService.playAlarm();
+    }
+
+    updateClock() {
+        this.seconds -= 1;
+        if (this.seconds < 0) {
             //end of step has been reached
-            if (stepComponent.minutes === 0) {
-                stepComponent.seconds = 0;
-                stepComponent.stopTimer();
+            if (this.minutes === 0) {
+                this.seconds = 0;
+                this.handleTimerEnd();
             }
             else {
-                stepComponent.minutes -= 1;
-                stepComponent.seconds = 59;
+                this.minutes -= 1;
+                this.seconds = 59;
             }
         }
     }
 
     createInterval() {
-        this.interval = setInterval(this.updateClock, 1000, this);
+        this.interval = setInterval(() => { this.updateClock() }, 1000);
     }
 
     isOutOfTime() {
@@ -59,6 +69,7 @@ export class StepComponent {
         if (this.timerOn) {
             return;
         }
+        this.audioService.stopAlarm();
         if (this.isOutOfTime()) {
             //reset the timer so it can start from the beginning
             this.minutes = this.step.minutes;
@@ -82,6 +93,7 @@ export class StepComponent {
             clearInterval(this.interval);
             this.createInterval();
         }
+        this.audioService.stopAlarm();
         this.minutes = this.step.minutes;
         this.seconds = this.step.seconds;
     }

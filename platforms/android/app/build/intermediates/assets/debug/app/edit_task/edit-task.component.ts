@@ -106,7 +106,6 @@ export class EditTaskComponent {
 
     /* Saves this.task to disk. Returns true if it saves and false if it doesn't. */
     saveTask(): boolean {
-        console.log(this.savedTask);
         if (!this.validData()) {
             return false;
         }

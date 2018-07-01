@@ -1,5 +1,5 @@
 import fastClone = require('fast-clone');
-import deepEqual = require("deep-equal");
+import deepEqual = require('deep-equal');
 
 /* Pads a number to have a minimum length of 2 */
 export function padTwoDigits(val: number) {

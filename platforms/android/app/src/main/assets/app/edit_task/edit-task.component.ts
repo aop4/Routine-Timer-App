@@ -71,7 +71,7 @@ export class EditTaskComponent {
         private vcRef: ViewContainerRef, private router: Router, private location: Location) {
         let taskData = DataRetriever.data;
         this.task = new Task(taskData.name, taskData.description, taskData.steps);
-        this.savedTask = clone(this.task);
+        this.savedTask = <Task>clone(this.task);
         //store the original name of the task so we can retrieve an unadulterated copy in the 
         //TaskComponent (previous page) if the user doesn't save here
         DataRetriever.identifier = this.task.name.toString(); //the reference to the name is destroyed on back press; copy it
@@ -106,7 +106,6 @@ export class EditTaskComponent {
 
     /* Saves this.task to disk. Returns true if it saves and false if it doesn't. */
     saveTask(): boolean {
-        console.log(this.savedTask);
         if (!this.validData()) {
             return false;
         }
@@ -114,7 +113,7 @@ export class EditTaskComponent {
         this.dataManager.saveNewTask(this.task, (this.savedTask.name != this.task.name))
         .then((saved) => {
             if (saved) {
-                this.savedTask = clone(this.task);
+                this.savedTask = <Task>clone(this.task);
                 DataRetriever.identifier = this.task.name;
                 return true;
             }

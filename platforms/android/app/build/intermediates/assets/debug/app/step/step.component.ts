@@ -3,6 +3,7 @@ import { Router } from "@angular/router";
 import { Page } from "tns-core-modules/ui/page";
 import { Step } from "../shared/step/step.model";
 import { padTwoDigits } from "../util";
+import { AudioService } from "../shared/audio.service";
 
 @Component({
     selector: "tmr-step",
@@ -18,7 +19,7 @@ export class StepComponent {
     timerOn = false;
     padTwoDigits = padTwoDigits;
 
-    constructor(private page: Page) {
+    constructor(private page: Page, private audioService: AudioService) {
         
     }
 
@@ -34,6 +35,7 @@ export class StepComponent {
             if (stepComponent.minutes === 0) {
                 stepComponent.seconds = 0;
                 stepComponent.stopTimer();
+                this.audioService.playAlarm();
             }
             else {
                 stepComponent.minutes -= 1;

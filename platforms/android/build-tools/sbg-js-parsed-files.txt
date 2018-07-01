@@ -2,6 +2,7 @@
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/data.service.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/status-bar-util.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/step/step.model.js
+/home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/audio.service.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/pass-data.service.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/task/task.model.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/app.routing.js
@@ -287,6 +288,8 @@
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-ui-chart/misc/chart-event-data.common.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-ui-chart/initializers/chart-initializers.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-ui-chart/initializers/chart-initializers.common.js
+/home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-sound/sound.js
+/home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-sound/sound-common.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-ui-sidedrawer/ui-sidedrawer.common.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-ui-sidedrawer/hooks/before-livesync/nativescript-angular-sync.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-ui-sidedrawer/ui-sidedrawer.js

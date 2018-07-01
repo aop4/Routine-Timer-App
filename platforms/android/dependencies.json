@@ -44,6 +44,10 @@
         "directory": "../../node_modules/nativescript-social-share"
     },
     {
+        "name": "nativescript-sound",
+        "directory": "../../node_modules/nativescript-sound"
+    },
+    {
         "name": "nativescript-theme-core",
         "directory": "../../node_modules/nativescript-theme-core"
     },

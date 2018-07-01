@@ -1,4 +1,5 @@
-import clone = require('fast-clone');
+import fastClone = require('fast-clone');
+import deepEqual = require('deep-equal');
 
 /* Pads a number to have a minimum length of 2 */
 export function padTwoDigits(val: number) {
@@ -9,8 +10,6 @@ export function padTwoDigits(val: number) {
 }
 
 export function deepEquals(obj1, obj2) {
-    var deepEqual = require("deep-equal");
-    //console.log(JSON.stringify(obj1)); console.log(JSON.stringify(obj2));
     return deepEqual(obj1, obj2);
 }
 
@@ -19,5 +18,5 @@ export function isNonnegativeInteger(num: number) {
 }
 
 export function clone(obj: Object) {
-    return clone(obj);
+    return fastClone(obj);
 }
