@@ -1,1 +1,1 @@
-This is a timer app for keeping track of repeated routines with both timed and untimed steps. You might use it for lab procedures, workouts, recipes, lesson plans, ... you're call. It's a cross platform written in NativeScript (Angular/TypeScript, XML, CSS).
+This is a timer app for keeping track of repeated routines with both timed and untimed steps. You might use it for lab procedures, workouts, recipes, lesson plans, ... your call. It's a cross platform written in NativeScript (Angular/TypeScript, XML, CSS).
