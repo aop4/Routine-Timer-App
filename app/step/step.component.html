@@ -8,9 +8,9 @@
             <Label fontSize="40" [text]="padTwoDigits(minutes) + ' : ' + padTwoDigits(seconds)"></Label>
         </FlexboxLayout>
         <FlexboxLayout>
-            <Button text="Start" (tap)="startTimer()"></Button>
-            <Button text="Pause" (tap)="pauseTimer()"></Button>
-            <Button text="Reset" (tap)="resetTimer()"></Button>
+            <Label class="fontawesome icon" [text]="timerOn ? '&#xf28c;':'&#xf01d;'" (tap)="playPauseBtnAction()"></Label>
+            <Label class="fontawesome icon" [text]="(timerOn || paused) ? '&#xf021;':'&#xf28e;'" (tap)="resetTimer()"
+            [visibility]="(timerOn || alarmOn || paused) ? 'visible':'collapsed'"></Label>
         </FlexboxLayout>
     </StackLayout>
 </StackLayout>

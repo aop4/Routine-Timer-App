@@ -4,6 +4,7 @@ import { Page } from "tns-core-modules/ui/page";
 import { Step } from "../shared/step/step.model";
 import { padTwoDigits } from "../util";
 import { AudioService } from "../shared/audio.service";
+import { start } from "tns-core-modules/application/application";
 
 @Component({
     selector: "tmr-step",
@@ -17,7 +18,10 @@ export class StepComponent implements OnInit, OnDestroy {
     seconds: number; //a copy of step.seconds that's lowered as time passes
     minutes: number; //a copy of step.minutes that's lowered as time passes
     timerOn = false;
+    paused = false; //whether the timer is paused mid-timing (so the reset button knows
+                    //to be visible when timer's paused)
     padTwoDigits = padTwoDigits;
+    alarmOn: boolean;
 
     constructor(private page: Page, private audioService: AudioService) {
         
@@ -35,6 +39,7 @@ export class StepComponent implements OnInit, OnDestroy {
     handleTimerEnd() {
         this.stopTimer();
         this.audioService.playAlarm();
+        this.alarmOn = true;
     }
 
     updateClock() {
@@ -65,11 +70,17 @@ export class StepComponent implements OnInit, OnDestroy {
         this.timerOn = false;
     }
 
+    stopAlarm() {
+        this.audioService.stopAlarm();
+        this.alarmOn = false;
+    }
+
     startTimer() {
         if (this.timerOn) {
             return;
         }
-        this.audioService.stopAlarm();
+        this.paused = false;
+        this.stopAlarm();
         if (this.isOutOfTime()) {
             //reset the timer so it can start from the beginning
             this.minutes = this.step.minutes;
@@ -83,6 +94,7 @@ export class StepComponent implements OnInit, OnDestroy {
         if (!this.timerOn) {
             return;
         }
+        this.paused = true;
         this.stopTimer();
     }
 
@@ -93,8 +105,19 @@ export class StepComponent implements OnInit, OnDestroy {
             clearInterval(this.interval);
             this.createInterval();
         }
-        this.audioService.stopAlarm();
+        this.paused = false; //since technically it's not suspended mid-tick. Helps control the UI
+        this.stopAlarm();
         this.minutes = this.step.minutes;
         this.seconds = this.step.seconds;
     }
+
+    playPauseBtnAction() {
+        if (this.timerOn) {
+            this.pauseTimer();
+        }
+        else {
+            this.startTimer();
+        }
+    }
+
 }

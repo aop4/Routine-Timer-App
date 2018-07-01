@@ -24,3 +24,9 @@ StackLayout.container {
 .light {
     color: #ddd;
 }
+
+.icon {
+    color: #1e88e5;
+    font-size: 60;
+    padding: 0 10;
+}
