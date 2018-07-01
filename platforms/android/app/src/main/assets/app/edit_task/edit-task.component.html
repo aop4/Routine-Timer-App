@@ -1,0 +1,38 @@
+<ActionBar>
+	<FlexboxLayout class="flex-control">
+        <Label class="fontawesome icon" text="&#xf060;" (tap)="backPress()"></Label>
+		<Label (tap)="saveTask()" class="save" text="Save"></Label>
+	</FlexboxLayout>
+</ActionBar>
+<ScrollView>
+    <StackLayout>
+		<StackLayout class="task-basics">
+            <Label text="Name (required)"></Label>
+            <TextView class="task-name input input-border" hint="Soup recipe" [(ngModel)]="task.name"></TextView>
+            <Label text="Description"></Label>
+            <TextView hint="Describe this task (optional)" [(ngModel)]="task.description"></TextView>
+		</StackLayout>
+        <RadListView [items]="task.steps" itemReorder="true" Drag="true">
+            <ng-template let-step="item" let-index="index">
+				<StackLayout class="task-handle">
+					<Label class="step-name" [text]="step.name"></Label>
+                    <FlexboxLayout class="space-bw">
+                        <Label class="fontawesome icon edit" text="&#xf044;" (tap)="editStepModal(step)"></Label>
+                        <Label class="fontawesome icon" text="&#xf07d;" [visibility]="task.steps.length > 1 ? 'visible' : 'hidden'"></Label>
+						<Label class="fontawesome icon" text="&#xf1f8;" (tap)="deleteStep(index)"></Label>
+                    </FlexboxLayout>
+				</StackLayout>
+            </ng-template>
+        </RadListView>
+		<FlexboxLayout class="center">
+            <StackLayout class="text-center">
+                <Label text="Add Step"></Label>
+                <Label (tap)="newStep()" class="fontawesome icon" text="&#xf055;"></Label>
+            </StackLayout>
+        </FlexboxLayout>
+        <StackLayout class="ctrl-btns">
+            <Button text="Save" (tap)="saveTask()"></Button>
+            <Button text="Cancel" (tap)="cancelEdit()"></Button>
+        </StackLayout>
+    </StackLayout>
+</ScrollView>

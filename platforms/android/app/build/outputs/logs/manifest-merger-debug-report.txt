@@ -1,0 +1,339 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
+MERGED from [com.orhanobut:hawk:2.0.1] /home/andrew/.gradle/caches/transforms-1/files-1.1/hawk-2.0.1.aar/e8f44a824d1c686ca72c40a4dfe48645/AndroidManifest.xml:2:1-8:12
+MERGED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:2:1-24:12
+MERGED from [com.facebook.fresco:fresco:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/fresco-0.9.0.aar/9e69549b63875b7ff23af17460dc58be/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-location:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-location-11.4.0.aar/f96f2a15f6a6fde928c4af9cd64d71e7/AndroidManifest.xml:2:1-5:12
+MERGED from [com.android.support:design:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/10f913801a64304ca34cfa4ba14cf737/AndroidManifest.xml:17:1-31:12
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0499d9f66f3c6b7fb663a89aec944383/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/a2df699b29c4ee1e2791bcd2b3f234ae/AndroidManifest.xml:17:1-26:12
+MERGED from [com.android.support:multidex:1.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/5639025f7a76e149ed378eeb96094340/AndroidManifest.xml:17:1-22:12
+MERGED from [com.facebook.fresco:drawee:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/drawee-0.9.0.aar/ad2b51b7cc90728581be5c2d8c5ebe9a/AndroidManifest.xml:2:1-9:12
+MERGED from [com.facebook.fresco:imagepipeline:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/imagepipeline-0.9.0.aar/9a2d27fa4d5168b19ec63b248076f07c/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-base-11.4.0.aar/fa43f989c2dcdf42981c3d90900bdb09/AndroidManifest.xml:16:1-21:12
+MERGED from [com.google.android.gms:play-services-tasks:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.4.0.aar/9540caaba1d966bacc7bcc8d4ed286e1/AndroidManifest.xml:2:1-5:12
+MERGED from [com.google.android.gms:play-services-basement:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.4.0.aar/37ad5b76fd86f5810352ee8cdb1a00b5/AndroidManifest.xml:16:1-23:12
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/645de52bba0c5d9ad0793d76aea13214/AndroidManifest.xml:17:1-28:12
+MERGED from [com.facebook.fresco:imagepipeline-base:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-0.9.0.aar/55dc286fa69df9975b081bd986cb5fee/AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:support-v4:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/70baaba781d5156041804a2ef2f59b6f/AndroidManifest.xml:17:1-22:12
+MERGED from [:nativescript-optimized-with-inspector:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript-optimized-with-inspector.aar/11b95a25a04689eb883ef382d6362148/AndroidManifest.xml:2:1-11:12
+MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:2:1-24:12
+MERGED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:2:1-23:12
+MERGED from [:nativescript_geolocation:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_geolocation.aar/4018074b40b56f851b03d5d4dd8d5729/AndroidManifest.xml:2:1-11:12
+MERGED from [:nativescript_social_share:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_social_share.aar/b711cae53a38b30631bfbcf1ef3ff253/AndroidManifest.xml:2:1-21:12
+MERGED from [:TNSAutoComplete-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSAutoComplete-release.aar/2114e0293c903a974e289ece942b2e52/AndroidManifest.xml:2:1-11:12
+MERGED from [:TNSCalendar-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSCalendar-release.aar/605fbcb56f7ee79fb7380f43151718f9/AndroidManifest.xml:2:1-11:12
+MERGED from [:TNSChart-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSChart-release.aar/a311abd24dccb73bd763edd630defd92/AndroidManifest.xml:2:1-11:12
+MERGED from [:TNSDataForm-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSDataForm-release.aar/ace34fe95a43317db6dc350ac6b7a7aa/AndroidManifest.xml:2:1-11:12
+MERGED from [:TNSGauge-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSGauge-release.aar/7b0b492343f035d200a3445b8e4511d9/AndroidManifest.xml:2:1-11:12
+MERGED from [:TNSListView-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSListView-release.aar/de617cd62dcd2740ba37b2480697668d/AndroidManifest.xml:2:1-11:12
+MERGED from [:TNSSideDrawer-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSSideDrawer-release.aar/47087febaf7ddc4007f72d4b12ccceca/AndroidManifest.xml:2:1-11:12
+MERGED from [:TNSCore-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSCore-release.aar/e67814a14812b89b9fce7f9fb3dbd453/AndroidManifest.xml:2:1-11:12
+MERGED from [:widgets-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/widgets-release.aar/9bd1061a63d21af3a44558cd1a918000/AndroidManifest.xml:2:1-14:12
+MERGED from [com.facebook.conceal:conceal:1.1.3] /home/andrew/.gradle/caches/transforms-1/files-1.1/conceal-1.1.3.aar/aa18e3bd989cde5a4b317c1d350eebf0/AndroidManifest.xml:7:1-16:12
+MERGED from [com.facebook.fresco:fbcore:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/fbcore-0.9.0.aar/7631d14403b0a18bc00145f31d7774ee/AndroidManifest.xml:2:1-9:12
+MERGED from [com.android.support:support-fragment:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/17926d8a9113473bdbcd86710aef446b/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/161241829645665c5a46bd7a9b614892/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/af480c19719084ddd3b5b20d80e69b89/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/ef113b165afb36b4347fd9acfcdb9592/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/aa4616ea50373d04cd29fe2ea97c85cb/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/b8b536980c469ef15e29cc7655d444b8/AndroidManifest.xml:17:1-22:12
+MERGED from [com.android.support:support-compat:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/60374df6c551d5b87c8f5e2737b0fb96/AndroidManifest.xml:17:1-22:12
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/andrew/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/986af2225da6decb1690907a326a9619/AndroidManifest.xml:17:1-24:12
+INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
+INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:2:1-43:12
+	package
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:3:2-49
+		INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml
+	android:versionName
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:5:2-27
+		INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:2:11-69
+	android:versionCode
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:4:2-25
+		INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml
+supports-screens
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:7:2-11:33
+	android:largeScreens
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:10:3-30
+	android:smallScreens
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:8:3-30
+	android:normalScreens
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:9:3-31
+	android:xlargeScreens
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:11:3-31
+uses-sdk
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:13:2-15:34
+INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:13:2-15:34
+INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:13:2-15:34
+MERGED from [com.orhanobut:hawk:2.0.1] /home/andrew/.gradle/caches/transforms-1/files-1.1/hawk-2.0.1.aar/e8f44a824d1c686ca72c40a4dfe48645/AndroidManifest.xml:6:5-44
+MERGED from [com.orhanobut:hawk:2.0.1] /home/andrew/.gradle/caches/transforms-1/files-1.1/hawk-2.0.1.aar/e8f44a824d1c686ca72c40a4dfe48645/AndroidManifest.xml:6:5-44
+MERGED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:7:5-9:41
+MERGED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.fresco:fresco:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/fresco-0.9.0.aar/9e69549b63875b7ff23af17460dc58be/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fresco:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/fresco-0.9.0.aar/9e69549b63875b7ff23af17460dc58be/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-location:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-location-11.4.0.aar/f96f2a15f6a6fde928c4af9cd64d71e7/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-location:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-location-11.4.0.aar/f96f2a15f6a6fde928c4af9cd64d71e7/AndroidManifest.xml:3:5-43
+MERGED from [com.android.support:design:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/10f913801a64304ca34cfa4ba14cf737/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:design:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/10f913801a64304ca34cfa4ba14cf737/AndroidManifest.xml:21:5-23:62
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0499d9f66f3c6b7fb663a89aec944383/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:appcompat-v7:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0499d9f66f3c6b7fb663a89aec944383/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/a2df699b29c4ee1e2791bcd2b3f234ae/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/a2df699b29c4ee1e2791bcd2b3f234ae/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:multidex:1.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/5639025f7a76e149ed378eeb96094340/AndroidManifest.xml:20:5-43
+MERGED from [com.android.support:multidex:1.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/multidex-1.0.2.aar/5639025f7a76e149ed378eeb96094340/AndroidManifest.xml:20:5-43
+MERGED from [com.facebook.fresco:drawee:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/drawee-0.9.0.aar/ad2b51b7cc90728581be5c2d8c5ebe9a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:drawee:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/drawee-0.9.0.aar/ad2b51b7cc90728581be5c2d8c5ebe9a/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/imagepipeline-0.9.0.aar/9a2d27fa4d5168b19ec63b248076f07c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/imagepipeline-0.9.0.aar/9a2d27fa4d5168b19ec63b248076f07c/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-base-11.4.0.aar/fa43f989c2dcdf42981c3d90900bdb09/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-base:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-base-11.4.0.aar/fa43f989c2dcdf42981c3d90900bdb09/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.4.0.aar/9540caaba1d966bacc7bcc8d4ed286e1/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-tasks:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.4.0.aar/9540caaba1d966bacc7bcc8d4ed286e1/AndroidManifest.xml:3:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.4.0.aar/37ad5b76fd86f5810352ee8cdb1a00b5/AndroidManifest.xml:17:5-43
+MERGED from [com.google.android.gms:play-services-basement:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.4.0.aar/37ad5b76fd86f5810352ee8cdb1a00b5/AndroidManifest.xml:17:5-43
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/645de52bba0c5d9ad0793d76aea13214/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/645de52bba0c5d9ad0793d76aea13214/AndroidManifest.xml:20:5-44
+MERGED from [com.facebook.fresco:imagepipeline-base:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-0.9.0.aar/55dc286fa69df9975b081bd986cb5fee/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:imagepipeline-base:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-0.9.0.aar/55dc286fa69df9975b081bd986cb5fee/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-v4:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/70baaba781d5156041804a2ef2f59b6f/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-v4:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/70baaba781d5156041804a2ef2f59b6f/AndroidManifest.xml:20:5-44
+MERGED from [:nativescript-optimized-with-inspector:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript-optimized-with-inspector.aar/11b95a25a04689eb883ef382d6362148/AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript-optimized-with-inspector:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript-optimized-with-inspector.aar/11b95a25a04689eb883ef382d6362148/AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:7:5-47
+MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:7:5-47
+MERGED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:7:5-47
+MERGED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:7:5-47
+MERGED from [:nativescript_geolocation:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_geolocation.aar/4018074b40b56f851b03d5d4dd8d5729/AndroidManifest.xml:7:5-47
+MERGED from [:nativescript_geolocation:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_geolocation.aar/4018074b40b56f851b03d5d4dd8d5729/AndroidManifest.xml:7:5-47
+MERGED from [:nativescript_social_share:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_social_share.aar/b711cae53a38b30631bfbcf1ef3ff253/AndroidManifest.xml:7:5-47
+MERGED from [:nativescript_social_share:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_social_share.aar/b711cae53a38b30631bfbcf1ef3ff253/AndroidManifest.xml:7:5-47
+MERGED from [:TNSAutoComplete-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSAutoComplete-release.aar/2114e0293c903a974e289ece942b2e52/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSAutoComplete-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSAutoComplete-release.aar/2114e0293c903a974e289ece942b2e52/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSCalendar-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSCalendar-release.aar/605fbcb56f7ee79fb7380f43151718f9/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSCalendar-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSCalendar-release.aar/605fbcb56f7ee79fb7380f43151718f9/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSChart-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSChart-release.aar/a311abd24dccb73bd763edd630defd92/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSChart-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSChart-release.aar/a311abd24dccb73bd763edd630defd92/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSDataForm-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSDataForm-release.aar/ace34fe95a43317db6dc350ac6b7a7aa/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSDataForm-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSDataForm-release.aar/ace34fe95a43317db6dc350ac6b7a7aa/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSGauge-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSGauge-release.aar/7b0b492343f035d200a3445b8e4511d9/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSGauge-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSGauge-release.aar/7b0b492343f035d200a3445b8e4511d9/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSListView-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSListView-release.aar/de617cd62dcd2740ba37b2480697668d/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSListView-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSListView-release.aar/de617cd62dcd2740ba37b2480697668d/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSSideDrawer-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSSideDrawer-release.aar/47087febaf7ddc4007f72d4b12ccceca/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSSideDrawer-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSSideDrawer-release.aar/47087febaf7ddc4007f72d4b12ccceca/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSCore-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSCore-release.aar/e67814a14812b89b9fce7f9fb3dbd453/AndroidManifest.xml:7:5-9:41
+MERGED from [:TNSCore-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSCore-release.aar/e67814a14812b89b9fce7f9fb3dbd453/AndroidManifest.xml:7:5-9:41
+MERGED from [:widgets-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/widgets-release.aar/9bd1061a63d21af3a44558cd1a918000/AndroidManifest.xml:7:5-9:41
+MERGED from [:widgets-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/widgets-release.aar/9bd1061a63d21af3a44558cd1a918000/AndroidManifest.xml:7:5-9:41
+MERGED from [com.facebook.conceal:conceal:1.1.3] /home/andrew/.gradle/caches/transforms-1/files-1.1/conceal-1.1.3.aar/aa18e3bd989cde5a4b317c1d350eebf0/AndroidManifest.xml:12:5-14:41
+MERGED from [com.facebook.conceal:conceal:1.1.3] /home/andrew/.gradle/caches/transforms-1/files-1.1/conceal-1.1.3.aar/aa18e3bd989cde5a4b317c1d350eebf0/AndroidManifest.xml:12:5-14:41
+MERGED from [com.facebook.fresco:fbcore:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/fbcore-0.9.0.aar/7631d14403b0a18bc00145f31d7774ee/AndroidManifest.xml:5:5-7:41
+MERGED from [com.facebook.fresco:fbcore:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/fbcore-0.9.0.aar/7631d14403b0a18bc00145f31d7774ee/AndroidManifest.xml:5:5-7:41
+MERGED from [com.android.support:support-fragment:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/17926d8a9113473bdbcd86710aef446b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-fragment:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-fragment-27.0.2.aar/17926d8a9113473bdbcd86710aef446b/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/161241829645665c5a46bd7a9b614892/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-utils:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-core-utils-27.0.2.aar/161241829645665c5a46bd7a9b614892/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/af480c19719084ddd3b5b20d80e69b89/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:animated-vector-drawable:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/animated-vector-drawable-27.0.2.aar/af480c19719084ddd3b5b20d80e69b89/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/ef113b165afb36b4347fd9acfcdb9592/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-vector-drawable:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-vector-drawable-27.0.2.aar/ef113b165afb36b4347fd9acfcdb9592/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/aa4616ea50373d04cd29fe2ea97c85cb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-media-compat:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-media-compat-27.0.2.aar/aa4616ea50373d04cd29fe2ea97c85cb/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/b8b536980c469ef15e29cc7655d444b8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-core-ui:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-core-ui-27.0.2.aar/b8b536980c469ef15e29cc7655d444b8/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/60374df6c551d5b87c8f5e2737b0fb96/AndroidManifest.xml:20:5-44
+MERGED from [com.android.support:support-compat:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-compat-27.0.2.aar/60374df6c551d5b87c8f5e2737b0fb96/AndroidManifest.xml:20:5-44
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/andrew/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/986af2225da6decb1690907a326a9619/AndroidManifest.xml:20:5-22:41
+MERGED from [android.arch.lifecycle:runtime:1.0.3] /home/andrew/.gradle/caches/transforms-1/files-1.1/runtime-1.0.3.aar/986af2225da6decb1690907a326a9619/AndroidManifest.xml:20:5-22:41
+INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:13:2-15:34
+INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:13:2-15:34
+	tools:overrideLibrary
+		ADDED from [com.android.support:design:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/10f913801a64304ca34cfa4ba14cf737/AndroidManifest.xml:23:9-59
+	android:targetSdkVersion
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:15:3-32
+		INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml
+		INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:14:3-29
+		INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml
+		MERGED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:14:3-29
+		MERGED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:14:3-29
+		MERGED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:14:3-29
+		MERGED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:14:3-29
+		INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml
+uses-permission#android.permission.READ_EXTERNAL_STORAGE
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:17:2-76
+MERGED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:12:5-80
+MERGED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:12:5-80
+	android:name
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:17:19-74
+uses-permission#android.permission.WRITE_EXTERNAL_STORAGE
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:18:2-77
+MERGED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:13:5-81
+MERGED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:13:5-81
+MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:10:5-81
+MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:10:5-81
+	android:name
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:18:19-75
+uses-permission#android.permission.INTERNET
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:19:2-63
+MERGED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:11:5-67
+MERGED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:11:5-67
+MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:9:5-67
+MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:9:5-67
+	android:name
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:19:19-61
+application
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:21:2-42:16
+MERGED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:16:5-22:19
+MERGED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:16:5-22:19
+MERGED from [com.google.android.gms:play-services-location:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-location-11.4.0.aar/f96f2a15f6a6fde928c4af9cd64d71e7/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-location:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-location-11.4.0.aar/f96f2a15f6a6fde928c4af9cd64d71e7/AndroidManifest.xml:4:5-19
+MERGED from [com.android.support:design:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/10f913801a64304ca34cfa4ba14cf737/AndroidManifest.xml:29:5-20
+MERGED from [com.android.support:design:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/10f913801a64304ca34cfa4ba14cf737/AndroidManifest.xml:29:5-20
+MERGED from [com.google.android.gms:play-services-base:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-base-11.4.0.aar/fa43f989c2dcdf42981c3d90900bdb09/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-base:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-base-11.4.0.aar/fa43f989c2dcdf42981c3d90900bdb09/AndroidManifest.xml:18:5-20:19
+MERGED from [com.google.android.gms:play-services-tasks:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.4.0.aar/9540caaba1d966bacc7bcc8d4ed286e1/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-tasks:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-tasks-11.4.0.aar/9540caaba1d966bacc7bcc8d4ed286e1/AndroidManifest.xml:4:5-19
+MERGED from [com.google.android.gms:play-services-basement:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.4.0.aar/37ad5b76fd86f5810352ee8cdb1a00b5/AndroidManifest.xml:19:5-21:19
+MERGED from [com.google.android.gms:play-services-basement:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.4.0.aar/37ad5b76fd86f5810352ee8cdb1a00b5/AndroidManifest.xml:19:5-21:19
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/645de52bba0c5d9ad0793d76aea13214/AndroidManifest.xml:26:5-20
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/645de52bba0c5d9ad0793d76aea13214/AndroidManifest.xml:26:5-20
+MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:13:5-22:19
+MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:13:5-22:19
+MERGED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:11:5-21:19
+MERGED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:11:5-21:19
+MERGED from [:nativescript_social_share:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_social_share.aar/b711cae53a38b30631bfbcf1ef3ff253/AndroidManifest.xml:9:5-19:19
+MERGED from [:nativescript_social_share:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_social_share.aar/b711cae53a38b30631bfbcf1ef3ff253/AndroidManifest.xml:9:5-19:19
+MERGED from [:widgets-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/widgets-release.aar/9bd1061a63d21af3a44558cd1a918000/AndroidManifest.xml:11:5-12:19
+MERGED from [:widgets-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/widgets-release.aar/9bd1061a63d21af3a44558cd1a918000/AndroidManifest.xml:11:5-12:19
+	android:label
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:25:3-35
+	android:icon
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:24:3-32
+	android:allowBackup
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:23:3-29
+	android:theme
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:26:3-34
+	android:name
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:22:3-49
+activity#com.tns.NativeScriptActivity
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:28:3-40:14
+	android:label
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:30:4-49
+	android:configChanges
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:31:4-65
+	android:theme
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:32:4-44
+	android:name
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:29:4-47
+meta-data#SET_THEME_ON_LAUNCH
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:34:4-87
+	android:resource
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:34:50-84
+	android:name
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:34:15-49
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:36:4-39:20
+action#android.intent.action.MAIN
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:37:5-57
+	android:name
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:37:13-54
+category#android.intent.category.LAUNCHER
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:38:5-65
+	android:name
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:38:15-62
+activity#com.tns.ErrorReportActivity
+ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:41:3-57
+	android:name
+		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:41:13-55
+uses-permission#android.permission.WAKE_LOCK
+ADDED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:14:5-68
+MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:11:5-68
+MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:11:5-68
+	android:name
+		ADDED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:14:22-65
+service#net.gotev.uploadservice.UploadService
+ADDED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:17:9-21:19
+	android:enabled
+		ADDED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:19:13-35
+	android:exported
+		ADDED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:20:13-37
+	android:name
+		ADDED from [net.gotev:uploadservice:3.4.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/uploadservice-3.4.2.aar/deebf6e8d25fce44647f16c61e2c7314/AndroidManifest.xml:18:13-65
+meta-data#android.support.VERSION
+ADDED from [com.android.support:design:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/10f913801a64304ca34cfa4ba14cf737/AndroidManifest.xml:25:5-27:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/a2df699b29c4ee1e2791bcd2b3f234ae/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:recyclerview-v7:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/recyclerview-v7-26.0.0-alpha1.aar/a2df699b29c4ee1e2791bcd2b3f234ae/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/645de52bba0c5d9ad0793d76aea13214/AndroidManifest.xml:22:5-24:41
+MERGED from [com.android.support:transition:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/645de52bba0c5d9ad0793d76aea13214/AndroidManifest.xml:22:5-24:41
+	android:value
+		ADDED from [com.android.support:design:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/10f913801a64304ca34cfa4ba14cf737/AndroidManifest.xml:27:9-38
+	android:name
+		ADDED from [com.android.support:design:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/10f913801a64304ca34cfa4ba14cf737/AndroidManifest.xml:26:9-47
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-base-11.4.0.aar/fa43f989c2dcdf42981c3d90900bdb09/AndroidManifest.xml:19:9-172
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-base-11.4.0.aar/fa43f989c2dcdf42981c3d90900bdb09/AndroidManifest.xml:19:146-170
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-base-11.4.0.aar/fa43f989c2dcdf42981c3d90900bdb09/AndroidManifest.xml:19:86-145
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-base-11.4.0.aar/fa43f989c2dcdf42981c3d90900bdb09/AndroidManifest.xml:19:19-85
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.4.0.aar/37ad5b76fd86f5810352ee8cdb1a00b5/AndroidManifest.xml:20:9-121
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.4.0.aar/37ad5b76fd86f5810352ee8cdb1a00b5/AndroidManifest.xml:20:66-119
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:11.4.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/play-services-basement-11.4.0.aar/37ad5b76fd86f5810352ee8cdb1a00b5/AndroidManifest.xml:20:20-65
+service#com.alexbbb.uploadservice.UploadService
+ADDED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:14:9-21:19
+	android:enabled
+		ADDED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:16:13-35
+	android:exported
+		ADDED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:17:13-37
+	android:name
+		ADDED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:15:13-67
+intent-filter#action:name:org.nativescript.imagepicker.uploadservice.action.upload
+ADDED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:18:13-20:29
+action#org.nativescript.imagepicker.uploadservice.action.upload
+ADDED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:19:17-99
+	android:name
+		ADDED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:19:25-96
+uses-permission#android.permission.CAMERA
+ADDED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:9:5-65
+	android:name
+		ADDED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:9:22-62
+provider#android.support.v4.content.FileProvider
+ADDED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:12:9-20:20
+MERGED from [:nativescript_social_share:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_social_share.aar/b711cae53a38b30631bfbcf1ef3ff253/AndroidManifest.xml:10:9-18:20
+MERGED from [:nativescript_social_share:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_social_share.aar/b711cae53a38b30631bfbcf1ef3ff253/AndroidManifest.xml:10:9-18:20
+	android:grantUriPermissions
+		ADDED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:16:13-47
+	android:authorities
+		ADDED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:14:13-60
+	android:exported
+		ADDED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:15:13-37
+	android:name
+		ADDED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:13:13-67
+meta-data#android.support.FILE_PROVIDER_PATHS
+ADDED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:17:13-19:58
+MERGED from [:nativescript_social_share:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_social_share.aar/b711cae53a38b30631bfbcf1ef3ff253/AndroidManifest.xml:15:13-17:58
+MERGED from [:nativescript_social_share:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_social_share.aar/b711cae53a38b30631bfbcf1ef3ff253/AndroidManifest.xml:15:13-17:58
+	android:resource
+		ADDED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:19:17-55
+	android:name
+		ADDED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:18:17-67
+uses-permission#android.permission.ACCESS_FINE_LOCATION
+ADDED from [:nativescript_geolocation:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_geolocation.aar/4018074b40b56f851b03d5d4dd8d5729/AndroidManifest.xml:9:5-79
+	android:name
+		ADDED from [:nativescript_geolocation:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_geolocation.aar/4018074b40b56f851b03d5d4dd8d5729/AndroidManifest.xml:9:22-76

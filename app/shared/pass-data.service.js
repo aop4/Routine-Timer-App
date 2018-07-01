@@ -1,0 +1,14 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+/* This class is merely used as a way to pass arbitrary data from one route to another,
+without the use of a router. Another approach is to use an injectable service or query
+parameters, but a static variable also does the job. */
+var DataRetriever = /** @class */ (function () {
+    function DataRetriever() {
+    }
+    DataRetriever.modified = false;
+    DataRetriever.alreadySetBackPressed = false;
+    return DataRetriever;
+}());
+exports.DataRetriever = DataRetriever;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoicGFzcy1kYXRhLnNlcnZpY2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJwYXNzLWRhdGEuc2VydmljZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUVBOzt1REFFdUQ7QUFDdkQ7SUFBQTtJQU9BLENBQUM7SUFIVSxzQkFBUSxHQUFZLEtBQUssQ0FBQztJQUMxQixtQ0FBcUIsR0FBWSxLQUFLLENBQUM7SUFFbEQsb0JBQUM7Q0FBQSxBQVBELElBT0M7QUFQWSxzQ0FBYSIsInNvdXJjZXNDb250ZW50IjpbImltcG9ydCB7IFRhc2sgfSBmcm9tIFwiLi90YXNrL3Rhc2subW9kZWxcIjtcclxuXHJcbi8qIFRoaXMgY2xhc3MgaXMgbWVyZWx5IHVzZWQgYXMgYSB3YXkgdG8gcGFzcyBhcmJpdHJhcnkgZGF0YSBmcm9tIG9uZSByb3V0ZSB0byBhbm90aGVyLFxyXG53aXRob3V0IHRoZSB1c2Ugb2YgYSByb3V0ZXIuIEFub3RoZXIgYXBwcm9hY2ggaXMgdG8gdXNlIGFuIGluamVjdGFibGUgc2VydmljZSBvciBxdWVyeVxyXG5wYXJhbWV0ZXJzLCBidXQgYSBzdGF0aWMgdmFyaWFibGUgYWxzbyBkb2VzIHRoZSBqb2IuICovXHJcbmV4cG9ydCBjbGFzcyBEYXRhUmV0cmlldmVyIHtcclxuXHJcbiAgICBzdGF0aWMgZGF0YTogYW55O1xyXG4gICAgc3RhdGljIGlkZW50aWZpZXI6IHN0cmluZztcclxuICAgIHN0YXRpYyBtb2RpZmllZDogYm9vbGVhbiA9IGZhbHNlO1xyXG4gICAgc3RhdGljIGFscmVhZHlTZXRCYWNrUHJlc3NlZDogYm9vbGVhbiA9IGZhbHNlO1xyXG5cclxufVxyXG4iXX0=

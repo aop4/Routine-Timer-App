@@ -1,0 +1,19 @@
+.fontawesome {
+    font-size: 40;
+}
+
+FlexboxLayout {
+    align-items: center;
+}
+
+.task-name {
+    font-size: 20;
+    width: 80%; /*The wrapped label text can cover up the Edit icon*/
+}
+
+.edit {
+    padding-left: 10;
+}
+
+
+

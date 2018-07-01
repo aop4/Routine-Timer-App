@@ -1,0 +1,13 @@
+<ScrollView>
+	<StackLayout>
+		<ActionBar>
+			<FlexboxLayout>
+				<Label class="task-name" textWrap="true" [text]="task.name"></Label>
+				<Label (tap)="editTask()" class="fontawesome icon edit" text="&#xf044;"></Label>
+			</FlexboxLayout>
+		</ActionBar>
+		<StackLayout *ngFor="let item of task.steps">
+			<tmr-step [step]="item"></tmr-step>
+		</StackLayout>
+	</StackLayout>
+</ScrollView>

@@ -1,0 +1,53 @@
+.ctrl-btns {
+    padding: 20 50;
+}
+
+.save {
+    padding-right: 30;
+}
+
+.task-basics {
+    padding: 20;
+    margin-bottom: 10;
+    background-color: rgb(124, 189, 250);
+}
+
+.task-name {
+    font-size: 30;
+}
+
+Label {
+    font-size: 20;
+    color: #444;
+}
+
+FlexboxLayout.center {
+    justify-content: center;
+}
+
+.space-bw {
+    justify-content: space-between;
+    padding: 15 0;
+}
+
+.step-name {
+    padding-left: 10;
+}
+
+.icon {
+    font-size: 40;
+    padding: 0 40;
+}
+
+.save {
+    color: white;
+}
+
+.task-handle {
+    border-color: rgb(124, 189, 250);
+    border-bottom-width: 1;
+}
+
+.flex-control {
+    justify-content: space-between;
+}

@@ -1,0 +1,30 @@
+ActionBar {
+    background-color: #42a5f5;
+    color: white;
+    padding: 10 0;
+}
+
+Button {
+  text-transform: none;
+}
+
+.fontawesome {
+  font-family: "FontAwesome"; /*For icons*/
+}
+
+.text-center {
+  text-align: center;
+}
+
+.icon {
+    font-size: 35;
+    color: white;
+}
+
+Label {
+  font-size: 20;
+}
+
+.link {
+  color: #42a5f5;
+}

@@ -1,0 +1,13 @@
+Label.task-name {
+    font-size: 22;
+}
+
+.container {
+    padding: 20;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.icon {
+    color: #555;
+}

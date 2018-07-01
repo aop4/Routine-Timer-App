@@ -1,0 +1,2 @@
+org.nativescript.nativescript_social_share
+int xml provider_paths 0x7f190001
