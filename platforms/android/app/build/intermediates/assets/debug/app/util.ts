@@ -1,3 +1,5 @@
+import clone = require('fast-clone');
+
 /* Pads a number to have a minimum length of 2 */
 export function padTwoDigits(val: number) {
     if (val.toString().length === 1) {
@@ -14,4 +16,8 @@ export function deepEquals(obj1, obj2) {
 
 export function isNonnegativeInteger(num: number) {
     return (Number.isInteger(num) && num >= 0);
+}
+
+export function clone(obj: Object) {
+    return clone(obj);
 }

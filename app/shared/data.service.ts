@@ -21,38 +21,50 @@ export class SystemDataService {
         this.saveSuccessMessage(task.name);
     }
 
-    overwritingData(task: Task, savedTasks: Object) {
-        let options = {
-            title: "Overwriting data",
-            message: "The routine " + task.name + " already exists. Do you want to overwrite it?",
-            okButtonText: "Yes",
-            cancelButtonText: "No",
-            neutralButtonText: "Cancel"
-        };
-        dialogs.confirm(options).then((wantsToOverwrite: boolean) => {
-            if (wantsToOverwrite) {
-                this.writeTask(savedTasks, task)
-                return true;
-            }
-            return false;
+    overwritingData(task: Task, savedTasks: Object): Promise<Boolean> {
+        return new Promise<Boolean>((resolve) => {
+            let options = {
+                title: "Overwriting data",
+                message: "The routine " + task.name + " already exists. Do you want to overwrite it?",
+                okButtonText: "Yes",
+                cancelButtonText: "No",
+                neutralButtonText: "Cancel"
+            };
+            dialogs.confirm(options).then((wantsToOverwrite: boolean) => {
+                if (wantsToOverwrite) {
+                    this.writeTask(savedTasks, task)
+                    resolve(true);
+                }
+                else {
+                    resolve(false);
+                }
+            });
         });
     }
 
     /* Attempts to save task. Returns true on success and false if the user decides not to save. */
     saveNewTask(task: Task, promptForOverwrite: boolean) {
-        const appSettings = require("application-settings");
-        var savedTasks = JSON.parse(appSettings.getString("tasks", "{}"));
-        //should show an overwrite modal iff the user didn't get here by intentionally
-        //editing the activity they're overwriting, since otherwise it's obvious/annoying
-        if (promptForOverwrite && savedTasks[task.name]) {
-            let wantsToOverwrite = this.overwritingData(task, savedTasks);
-            if (wantsToOverwrite) {
-                return true;
+        return new Promise<Boolean>( (resolve) => {
+            const appSettings = require("application-settings");
+            var savedTasks = JSON.parse(appSettings.getString("tasks", "{}"));
+            //should show an overwrite modal iff the user didn't get here by intentionally
+            //editing the activity they're overwriting, since otherwise it's obvious/annoying
+            if (promptForOverwrite && savedTasks[task.name]) {
+                this.overwritingData(task, savedTasks).then((overwrote) => {
+                    console.log("overwrote: "+overwrote);
+                    if (overwrote) {
+                        resolve(true);
+                    }
+                    else {
+                        resolve(false)
+                    }
+                });
             }
-        }
-        else {
-            this.writeTask(savedTasks, task);
-        }
+            else {
+                this.writeTask(savedTasks, task);
+                resolve(true);
+            }
+        });
     }
 
     deleteTask(task: Task) {

@@ -9,7 +9,7 @@ import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 import { SystemDataService } from "../shared/data.service";
 import { DataRetriever } from "../shared/pass-data.service";
 import { ModalDialogService } from "nativescript-angular/directives/dialogs";
-import { deepEquals, isNonnegativeInteger } from "../util";
+import { deepEquals, isNonnegativeInteger, clone } from "../util";
 import { topmost } from "ui/frame";
 import { AndroidApplication, AndroidActivityBackPressedEventData, android } from "application";
 import * as Toast from "nativescript-toast";
@@ -26,7 +26,7 @@ import {Location} from '@angular/common';
 export class EditTaskComponent {
 
     task: Task;
-    savedTask: Task; //an unmodified version of the last saved version of `task`
+    savedTask: Task; //an unmodified copy of the last saved version of this.task
 
     showFailureMsg(msg) {
         let options = {
@@ -71,7 +71,7 @@ export class EditTaskComponent {
         private vcRef: ViewContainerRef, private router: Router, private location: Location) {
         let taskData = DataRetriever.data;
         this.task = new Task(taskData.name, taskData.description, taskData.steps);
-        this.savedTask = Object.assign({}, this.task);
+        this.savedTask = clone(this.task);
         //store the original name of the task so we can retrieve an unadulterated copy in the 
         //TaskComponent (previous page) if the user doesn't save here
         DataRetriever.identifier = this.task.name.toString(); //the reference to the name is destroyed on back press; copy it
@@ -110,13 +110,15 @@ export class EditTaskComponent {
             return false;
         }
         //attempt to save. On successful save, refresh the savedTask object to be the same as this.task
-        let saved = this.dataManager.saveNewTask(this.task, (this.savedTask.name != this.task.name));
-        if (saved) {
-            this.savedTask = Object.assign({}, this.task);
-            DataRetriever.identifier = this.task.name;
-            return true;
-        }
-        return false;
+        this.dataManager.saveNewTask(this.task, (this.savedTask.name != this.task.name))
+        .then((saved) => {
+            if (saved) {
+                this.savedTask = clone(this.task);
+                DataRetriever.identifier = this.task.name;
+                return true;
+            }
+            return false;
+        });
     }
 
     newStep() {

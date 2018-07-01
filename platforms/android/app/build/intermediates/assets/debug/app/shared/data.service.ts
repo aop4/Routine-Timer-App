@@ -40,19 +40,25 @@ export class SystemDataService {
 
     /* Attempts to save task. Returns true on success and false if the user decides not to save. */
     saveNewTask(task: Task, promptForOverwrite: boolean) {
-        const appSettings = require("application-settings");
-        var savedTasks = JSON.parse(appSettings.getString("tasks", "{}"));
-        //should show an overwrite modal iff the user didn't get here by intentionally
-        //editing the activity they're overwriting, since otherwise it's obvious/annoying
-        if (promptForOverwrite && savedTasks[task.name]) {
-            let wantsToOverwrite = this.overwritingData(task, savedTasks);
-            if (wantsToOverwrite) {
-                return true;
+        return new Promise<Boolean>( (resolve) => {
+            const appSettings = require("application-settings");
+            var savedTasks = JSON.parse(appSettings.getString("tasks", "{}"));
+            //should show an overwrite modal iff the user didn't get here by intentionally
+            //editing the activity they're overwriting, since otherwise it's obvious/annoying
+            if (promptForOverwrite && savedTasks[task.name]) {
+                let overwrote = this.overwritingData(task, savedTasks);
+                if (overwrote) {
+                    resolve(true);
+                }
+                else {
+                    resolve(false)
+                }
             }
-        }
-        else {
-            this.writeTask(savedTasks, task);
-        }
+            else {
+                this.writeTask(savedTasks, task);
+                resolve(true);
+            }
+        });
     }
 
     deleteTask(task: Task) {
