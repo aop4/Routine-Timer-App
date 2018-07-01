@@ -155,4 +155,8 @@ export class EditTaskComponent {
         });
     }
 
+    cancelEdit() {
+        this.location.back();
+    }
+
 }
