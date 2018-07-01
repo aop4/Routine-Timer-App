@@ -32,6 +32,7 @@ MERGED from [:TNSDataForm-release:] /home/andrew/.gradle/caches/transforms-1/fil
 MERGED from [:TNSGauge-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSGauge-release.aar/7b0b492343f035d200a3445b8e4511d9/AndroidManifest.xml:2:1-11:12
 MERGED from [:TNSListView-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSListView-release.aar/de617cd62dcd2740ba37b2480697668d/AndroidManifest.xml:2:1-11:12
 MERGED from [:TNSSideDrawer-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSSideDrawer-release.aar/47087febaf7ddc4007f72d4b12ccceca/AndroidManifest.xml:2:1-11:12
+MERGED from [:nativescript_vibrate:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_vibrate.aar/8ba184270ce635657c985fc696ff00c1/AndroidManifest.xml:2:1-11:12
 MERGED from [:TNSCore-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSCore-release.aar/e67814a14812b89b9fce7f9fb3dbd453/AndroidManifest.xml:2:1-11:12
 MERGED from [:widgets-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/widgets-release.aar/9bd1061a63d21af3a44558cd1a918000/AndroidManifest.xml:2:1-14:12
 MERGED from [com.facebook.conceal:conceal:1.1.3] /home/andrew/.gradle/caches/transforms-1/files-1.1/conceal-1.1.3.aar/aa18e3bd989cde5a4b317c1d350eebf0/AndroidManifest.xml:7:1-16:12
@@ -131,6 +132,8 @@ MERGED from [:TNSListView-release:] /home/andrew/.gradle/caches/transforms-1/fil
 MERGED from [:TNSListView-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSListView-release.aar/de617cd62dcd2740ba37b2480697668d/AndroidManifest.xml:7:5-9:41
 MERGED from [:TNSSideDrawer-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSSideDrawer-release.aar/47087febaf7ddc4007f72d4b12ccceca/AndroidManifest.xml:7:5-9:41
 MERGED from [:TNSSideDrawer-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSSideDrawer-release.aar/47087febaf7ddc4007f72d4b12ccceca/AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript_vibrate:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_vibrate.aar/8ba184270ce635657c985fc696ff00c1/AndroidManifest.xml:7:5-47
+MERGED from [:nativescript_vibrate:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_vibrate.aar/8ba184270ce635657c985fc696ff00c1/AndroidManifest.xml:7:5-47
 MERGED from [:TNSCore-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSCore-release.aar/e67814a14812b89b9fce7f9fb3dbd453/AndroidManifest.xml:7:5-9:41
 MERGED from [:TNSCore-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/TNSCore-release.aar/e67814a14812b89b9fce7f9fb3dbd453/AndroidManifest.xml:7:5-9:41
 MERGED from [:widgets-release:] /home/andrew/.gradle/caches/transforms-1/files-1.1/widgets-release.aar/9bd1061a63d21af3a44558cd1a918000/AndroidManifest.xml:7:5-9:41
@@ -166,6 +169,7 @@ INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/
 	android:minSdkVersion
 		ADDED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:14:3-29
 		INJECTED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml
+		MERGED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:14:3-29
 		MERGED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:14:3-29
 		MERGED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:14:3-29
 		MERGED from /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/AndroidManifest.xml:14:3-29
@@ -337,3 +341,7 @@ uses-permission#android.permission.ACCESS_FINE_LOCATION
 ADDED from [:nativescript_geolocation:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_geolocation.aar/4018074b40b56f851b03d5d4dd8d5729/AndroidManifest.xml:9:5-79
 	android:name
 		ADDED from [:nativescript_geolocation:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_geolocation.aar/4018074b40b56f851b03d5d4dd8d5729/AndroidManifest.xml:9:22-76
+uses-permission#android.permission.VIBRATE
+ADDED from [:nativescript_vibrate:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_vibrate.aar/8ba184270ce635657c985fc696ff00c1/AndroidManifest.xml:9:5-66
+	android:name
+		ADDED from [:nativescript_vibrate:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_vibrate.aar/8ba184270ce635657c985fc696ff00c1/AndroidManifest.xml:9:22-63

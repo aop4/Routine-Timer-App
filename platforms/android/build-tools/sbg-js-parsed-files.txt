@@ -302,6 +302,8 @@
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-fresco/nativescript-fresco-common.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-fresco/hooks/before-livesync/nativescript-angular-sync.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-accelerometer/index.js
+/home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-vibrate/vibrate.js
+/home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-vibrate/vibrate.common.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-ui-dataform/ui-dataform.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-ui-dataform/ui-dataform.common.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-ui-dataform/hooks/before-livesync/nativescript-angular-sync.js

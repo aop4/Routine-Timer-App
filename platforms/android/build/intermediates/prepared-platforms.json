@@ -31,6 +31,7 @@
     "nativescript-ui-gauge": true,
     "nativescript-ui-listview": true,
     "nativescript-ui-sidedrawer": true,
+    "nativescript-vibrate": true,
     "nativescript-vue": true,
     "reflect-metadata": true,
     "rxjs": true,

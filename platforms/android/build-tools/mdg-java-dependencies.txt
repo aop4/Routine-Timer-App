@@ -47,3 +47,4 @@
 /home/andrew/NativeScript/TimerApp/platforms/android/app/build/exploded-dependencies/39/classes.jar
 /home/andrew/NativeScript/TimerApp/platforms/android/app/build/exploded-dependencies/42/support-annotations-27.0.2.jar
 /home/andrew/NativeScript/TimerApp/platforms/android/app/build/exploded-dependencies/34/classes.jar
+/home/andrew/NativeScript/TimerApp/platforms/android/app/build/intermediates/classes/debug

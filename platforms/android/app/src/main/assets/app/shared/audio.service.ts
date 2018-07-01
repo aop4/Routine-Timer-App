@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import { android } from "tns-core-modules/application/application";
+import { Vibrate } from 'nativescript-vibrate';
 
 @Injectable()
 export class AudioService {
@@ -12,6 +13,7 @@ export class AudioService {
         "tone1":this.audioPlayer.create("~/sounds/tone-1.mp3"), //8 second clip
         "tone1-short":this.audioPlayer.create("~/sounds/tone-1-short.mp3") //1 second clip
     }
+    vibrator = new Vibrate(); //I'm sorry... the docs use it too
 
     playAlarm() {
         this.currSound = this.sounds["tone1-short"];
@@ -30,6 +32,7 @@ export class AudioService {
         }
         this.currSound.play(); //play an initial clip before looping begins
         this.isPlaying = true;
+        this.vibrator.vibrate([0, 500, 200, 500, 200, 500]);
     }
 
     stopAlarm() {

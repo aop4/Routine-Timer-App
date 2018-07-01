@@ -84,6 +84,10 @@
         "directory": "../../node_modules/nativescript-ui-sidedrawer"
     },
     {
+        "name": "nativescript-vibrate",
+        "directory": "../../node_modules/nativescript-vibrate"
+    },
+    {
         "name": "nativescript-vue",
         "directory": "../../node_modules/nativescript-vue"
     },

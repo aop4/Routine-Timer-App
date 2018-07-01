@@ -1,23 +1,27 @@
-import { Component, Input, OnInit } from "@angular/core";
+import { Component, Input, OnInit, OnDestroy } from "@angular/core";
 import { Router } from "@angular/router";
 import { Page } from "tns-core-modules/ui/page";
 import { Step } from "../shared/step/step.model";
 import { padTwoDigits } from "../util";
 import { AudioService } from "../shared/audio.service";
+import { start } from "tns-core-modules/application/application";
 
 @Component({
     selector: "tmr-step",
     templateUrl: "step/step.component.html",
     styleUrls: ["step/step.component.css"]
 })
-export class StepComponent {
+export class StepComponent implements OnInit, OnDestroy {
 
     @Input() step: Step;
     interval: number; //an ID for a JS interval
     seconds: number; //a copy of step.seconds that's lowered as time passes
     minutes: number; //a copy of step.minutes that's lowered as time passes
     timerOn = false;
+    paused = false; //whether the timer is paused mid-timing (so the reset button knows
+                    //to be visible when timer's paused)
     padTwoDigits = padTwoDigits;
+    alarmOn: boolean;
 
     constructor(private page: Page, private audioService: AudioService) {
         
@@ -28,24 +32,33 @@ export class StepComponent {
         this.seconds = this.step.seconds;
     }
 
-    updateClock(stepComponent: StepComponent) {
-        stepComponent.seconds -= 1;
-        if (stepComponent.seconds < 0) {
+    ngOnDestroy() {
+        this.audioService.stopAlarm();
+    }
+
+    handleTimerEnd() {
+        this.stopTimer();
+        this.audioService.playAlarm();
+        this.alarmOn = true;
+    }
+
+    updateClock() {
+        this.seconds -= 1;
+        if (this.seconds < 0) {
             //end of step has been reached
-            if (stepComponent.minutes === 0) {
-                stepComponent.seconds = 0;
-                stepComponent.stopTimer();
-                this.audioService.playAlarm();
+            if (this.minutes === 0) {
+                this.seconds = 0;
+                this.handleTimerEnd();
             }
             else {
-                stepComponent.minutes -= 1;
-                stepComponent.seconds = 59;
+                this.minutes -= 1;
+                this.seconds = 59;
             }
         }
     }
 
     createInterval() {
-        this.interval = setInterval(this.updateClock, 1000, this);
+        this.interval = setInterval(() => { this.updateClock() }, 1000);
     }
 
     isOutOfTime() {
@@ -57,10 +70,17 @@ export class StepComponent {
         this.timerOn = false;
     }
 
+    stopAlarm() {
+        this.audioService.stopAlarm();
+        this.alarmOn = false;
+    }
+
     startTimer() {
         if (this.timerOn) {
             return;
         }
+        this.paused = false;
+        this.stopAlarm();
         if (this.isOutOfTime()) {
             //reset the timer so it can start from the beginning
             this.minutes = this.step.minutes;
@@ -74,6 +94,7 @@ export class StepComponent {
         if (!this.timerOn) {
             return;
         }
+        this.paused = true;
         this.stopTimer();
     }
 
@@ -84,7 +105,19 @@ export class StepComponent {
             clearInterval(this.interval);
             this.createInterval();
         }
+        this.paused = false; //since technically it's not suspended mid-tick. Helps control the UI
+        this.stopAlarm();
         this.minutes = this.step.minutes;
         this.seconds = this.step.seconds;
     }
+
+    playPauseBtnAction() {
+        if (this.timerOn) {
+            this.pauseTimer();
+        }
+        else {
+            this.startTimer();
+        }
+    }
+
 }
