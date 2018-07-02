@@ -1,5 +1,6 @@
 <Page #page>
     <StackLayout #container class="step">
+        <Label class="fontawesome icon link" text="&#xf00d;" (tap)="closeModal()" horizontalAlignment="right"></Label>
         <TextField hint="Name of step (required)" [(ngModel)]="step.name"></TextField>
         <TextView hint="Description (optional)                 " [(ngModel)]="step.description"></TextView>
         <Label text="Time (optional)"></Label>
@@ -10,6 +11,5 @@
         </FlexboxLayout>
         <Label text="Repetitions"></Label>
         <TextField [text]="repetitions" (textChange)="updateRepetitions($event)" maxLength="2" class="reps" horizontalAlignment="left" keyboardType="number"></TextField>
-        <Label text="Close" (tap)="closeModal()" class="link" horizontalAlignment="right"></Label>
     </StackLayout>
 </Page>
