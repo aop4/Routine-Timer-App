@@ -10,8 +10,7 @@ import { AudioService } from "../shared/audio.service";
 @Component({
     selector: "tmr-task",
     templateUrl: "task/task.component.html",
-    styleUrls: ["task/task.component.css"],
-    providers: [SystemDataService]
+    styleUrls: ["task/task.component.css"]
 })
 export class TaskComponent implements OnInit {
 
@@ -30,6 +29,9 @@ export class TaskComponent implements OnInit {
     ngOnInit() {
         //when we're not coming back to this page from the editing page
         this.task = DataRetriever.data;
+        //make sure the audio service is updated with any changes in settings--
+        //like the user deciding they don't want vibration anymore
+        this.audioService.refreshSettings();
     }
 
     editTask() {

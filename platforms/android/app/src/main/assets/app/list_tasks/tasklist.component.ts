@@ -13,8 +13,7 @@ import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout/stack-layo
 @Component({
     selector: "tmr-task-list",
     templateUrl: "list_tasks/tasklist.component.html",
-    styleUrls: ["list_tasks/tasklist.component.css"],
-    providers: [SystemDataService]
+    styleUrls: ["list_tasks/tasklist.component.css"]
 })
 export class TaskListComponent implements OnInit {
 
@@ -39,7 +38,7 @@ export class TaskListComponent implements OnInit {
                 this.refreshTasks();
             }
         });
-        this.dataManager.setSettingsIfNone(); //for a fresh install, set user preferences to default
+        this.dataManager.setSettingsIfNone(); //for a fresh install, set user preferences to their defaults
     }
 
     newTask() {

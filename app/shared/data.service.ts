@@ -34,7 +34,7 @@ export class SystemDataService {
             };
             dialogs.confirm(options).then((wantsToOverwrite: boolean) => {
                 if (wantsToOverwrite) {
-                    this.writeTask(savedTasks, task)
+                    this.writeTask(savedTasks, task);
                     resolve(true);
                 }
                 else {
@@ -52,12 +52,11 @@ export class SystemDataService {
             //editing the activity they're overwriting, since otherwise it's obvious/annoying
             if (promptForOverwrite && savedTasks[task.name]) {
                 this.overwritingData(task, savedTasks).then((overwrote) => {
-                    console.log("overwrote: "+overwrote);
                     if (overwrote) {
                         resolve(true);
                     }
                     else {
-                        resolve(false)
+                        resolve(false);
                     }
                 });
             }

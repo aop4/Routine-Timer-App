@@ -6,15 +6,13 @@ import { Step } from "../shared/step/step.model";
 import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 import { SystemDataService } from "../shared/data.service";
 import { DataRetriever } from "../shared/pass-data.service";
-import { EventData } from "data/observable";
 
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout/stack-layout";
 
 @Component({
     selector: "tmr-task-list",
     templateUrl: "list_tasks/tasklist.component.html",
-    styleUrls: ["list_tasks/tasklist.component.css"],
-    providers: [SystemDataService]
+    styleUrls: ["list_tasks/tasklist.component.css"]
 })
 export class TaskListComponent implements OnInit {
 

@@ -20,8 +20,7 @@ import {Location} from '@angular/common';
 @Component({
     selector: "tmr-edit-task",
     templateUrl: "edit_task/edit-task.component.html",
-    styleUrls: ["edit_task/edit-task.component.css"],
-    providers: [SystemDataService]
+    styleUrls: ["edit_task/edit-task.component.css"]
 })
 export class EditTaskComponent {
 

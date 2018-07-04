@@ -12,6 +12,7 @@ import { routes, navigatableComponents } from "./app.routing";
 import { AndroidApplication, AndroidActivityBackPressedEventData, android } from "application";
 import { isAndroid } from "platform";
 import { AudioService } from "./shared/audio.service";
+import { SystemDataService } from "~/shared/data.service";
 
 
 @NgModule({
@@ -28,7 +29,7 @@ import { AudioService } from "./shared/audio.service";
     AppComponent,
     ...navigatableComponents
   ],
-  providers: [AudioService, EditStepComponent],
+  providers: [AudioService, EditStepComponent, SystemDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -10,8 +10,7 @@ import { AudioService } from "../shared/audio.service";
 @Component({
     selector: "tmr-task",
     templateUrl: "task/task.component.html",
-    styleUrls: ["task/task.component.css"],
-    providers: [SystemDataService]
+    styleUrls: ["task/task.component.css"]
 })
 export class TaskComponent implements OnInit {
 

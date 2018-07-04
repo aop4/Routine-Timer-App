@@ -1,11 +1,10 @@
 import { Component } from "@angular/core";
-import { SystemDataService } from "~/shared/data.service";
+import { SystemDataService } from "../shared/data.service";
 
 @Component({
     selector: "settings",
     templateUrl: "settings-page/settings.component.html",
-    styleUrls: ["settings-page/settings.component.css"],
-    providers: [SystemDataService]
+    styleUrls: ["settings-page/settings.component.css"]
 })
 export class SettingsComponent {
 
@@ -14,7 +13,7 @@ export class SettingsComponent {
     wantsContinuousVibrate: boolean;
     wantsContinuousTone: boolean;
 
-    constructor(systemDataService: SystemDataService) {
+    constructor(private systemDataService: SystemDataService) {
 
     }
 }

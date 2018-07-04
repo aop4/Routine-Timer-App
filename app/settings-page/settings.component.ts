@@ -5,8 +5,7 @@ import { TimerSettings } from "~/shared/settings/timer-settings.model";
 @Component({
     selector: "settings",
     templateUrl: "settings-page/settings.component.html",
-    styleUrls: ["settings-page/settings.component.css"],
-    providers: [SystemDataService]
+    styleUrls: ["settings-page/settings.component.css"]
 })
 export class SettingsComponent implements OnDestroy {
 
@@ -14,7 +13,6 @@ export class SettingsComponent implements OnDestroy {
 
     constructor(private dataManager: SystemDataService) {
         this.settings = this.dataManager.getTimerSettings();
-        console.log(this.settings);
     }
 
     setContinuousVibrate(val: boolean) {
