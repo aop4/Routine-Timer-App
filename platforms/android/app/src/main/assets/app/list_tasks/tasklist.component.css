@@ -1,6 +1,14 @@
-.add-icon {
-    padding-right: 20;
+.action-icon {
     font-size: 45;
+    /* width: 80%; */
+}
+
+.action-icon.left {
+    margin-right: 50%;
+}
+
+.action-icon.right {
+    margin-left: 50%;
 }
 
 ActionBar {
@@ -12,3 +20,4 @@ StackLayout.msg {
     padding: 80 30 0 30;
     text-align: center;
 }
+

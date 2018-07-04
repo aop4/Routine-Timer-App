@@ -6,9 +6,9 @@ import { Page } from "tns-core-modules/ui/page";
 import { Task } from "../shared/task/task.model";
 import { Step } from "../shared/step/step.model";
 import { ListViewEventData, RadListView } from "nativescript-ui-listview";
-import { padTwoDigits } from "../util";
 import { TextField } from "ui/text-field";
-import {Location} from '@angular/common';
+import {Location} from "@angular/common";
+import * as Util from "../util";
 import { ModalDialogService } from "nativescript-angular/directives/dialogs";
 
 
@@ -20,7 +20,6 @@ import { ModalDialogService } from "nativescript-angular/directives/dialogs";
 export class EditStepComponent implements OnInit {
 
     step: Step; //the step represented by this component
-    padTwoDigits = padTwoDigits;
     minutes: number;
     seconds: number;
     repetitions: number;
@@ -65,7 +64,7 @@ export class EditStepComponent implements OnInit {
             }
             this.stopWarningUser(textField);
         }
-        else {
+        else if (text != "") {
             this.warnUser(textField);
         }
     }
@@ -94,6 +93,15 @@ export class EditStepComponent implements OnInit {
     closeModal() {
         //close this modal component (literally "this" component; it's modal suicide)
         this.params.closeCallback();
+    }
+
+    padTwoDigits(val: number) {
+        if (this.seconds === 0 && this.minutes === 0) {
+            return "";
+        }
+        else {
+            return Util.padTwoDigits(val);
+        }
     }
 
     constructor(private page: Page, private location: Location, private params: ModalDialogParams) {

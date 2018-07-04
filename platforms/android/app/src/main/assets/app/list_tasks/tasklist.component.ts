@@ -39,6 +39,7 @@ export class TaskListComponent implements OnInit {
                 this.refreshTasks();
             }
         });
+        this.dataManager.setSettingsIfNone(); //for a fresh install, set user preferences to default
     }
 
     newTask() {
@@ -46,6 +47,10 @@ export class TaskListComponent implements OnInit {
         //page so the user can fill in the details.
         DataRetriever.data = new Task("", "", []);
         this.router.navigate(["task/edit"]);
+    }
+
+    openSettings() {
+        this.router.navigate(["settings"]);
     }
 
 }

@@ -1,6 +1,7 @@
 <ActionBar>
-    <StackLayout horizontalAlignment="right" orientation="horizontal">
-        <Label (tap)="newTask()" class="fontawesome icon add-icon" text="&#xf055;"></Label>
+    <StackLayout class="actionbar-cntnr" orientation="horizontal" horizontalAlignment="right">
+        <Label (tap)="openSettings()" class="fontawesome icon action-icon left flex-left" text="&#xf013;"></Label>
+        <Label (tap)="newTask()" class="fontawesome icon action-icon right" text="&#xf055;"></Label>
     </StackLayout>
 </ActionBar>
 <RadListView [items]="taskList">

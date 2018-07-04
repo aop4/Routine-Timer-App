@@ -20,7 +20,7 @@ MERGED from [com.google.android.gms:play-services-basement:11.4.0] /home/andrew/
 MERGED from [com.android.support:transition:26.0.0-alpha1] /home/andrew/.gradle/caches/transforms-1/files-1.1/transition-26.0.0-alpha1.aar/645de52bba0c5d9ad0793d76aea13214/AndroidManifest.xml:17:1-28:12
 MERGED from [com.facebook.fresco:imagepipeline-base:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-0.9.0.aar/55dc286fa69df9975b081bd986cb5fee/AndroidManifest.xml:2:1-9:12
 MERGED from [com.android.support:support-v4:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/70baaba781d5156041804a2ef2f59b6f/AndroidManifest.xml:17:1-22:12
-MERGED from [:nativescript-optimized-with-inspector:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript-optimized-with-inspector.aar/11b95a25a04689eb883ef382d6362148/AndroidManifest.xml:2:1-11:12
+MERGED from [:nativescript-optimized-with-inspector:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript-optimized-with-inspector.aar/5fad8a56d88c47f95d79145772859c6e/AndroidManifest.xml:2:1-11:12
 MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:2:1-24:12
 MERGED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:2:1-23:12
 MERGED from [:nativescript_geolocation:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_geolocation.aar/4018074b40b56f851b03d5d4dd8d5729/AndroidManifest.xml:2:1-11:12
@@ -108,8 +108,8 @@ MERGED from [com.facebook.fresco:imagepipeline-base:0.9.0] /home/andrew/.gradle/
 MERGED from [com.facebook.fresco:imagepipeline-base:0.9.0] /home/andrew/.gradle/caches/transforms-1/files-1.1/imagepipeline-base-0.9.0.aar/55dc286fa69df9975b081bd986cb5fee/AndroidManifest.xml:5:5-7:41
 MERGED from [com.android.support:support-v4:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/70baaba781d5156041804a2ef2f59b6f/AndroidManifest.xml:20:5-44
 MERGED from [com.android.support:support-v4:27.0.2] /home/andrew/.gradle/caches/transforms-1/files-1.1/support-v4-27.0.2.aar/70baaba781d5156041804a2ef2f59b6f/AndroidManifest.xml:20:5-44
-MERGED from [:nativescript-optimized-with-inspector:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript-optimized-with-inspector.aar/11b95a25a04689eb883ef382d6362148/AndroidManifest.xml:7:5-9:41
-MERGED from [:nativescript-optimized-with-inspector:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript-optimized-with-inspector.aar/11b95a25a04689eb883ef382d6362148/AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript-optimized-with-inspector:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript-optimized-with-inspector.aar/5fad8a56d88c47f95d79145772859c6e/AndroidManifest.xml:7:5-9:41
+MERGED from [:nativescript-optimized-with-inspector:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript-optimized-with-inspector.aar/5fad8a56d88c47f95d79145772859c6e/AndroidManifest.xml:7:5-9:41
 MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:7:5-47
 MERGED from [:nativescript_background_http:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_background_http.aar/9b3652fda8f4f4b11ab3e81edf551afc/AndroidManifest.xml:7:5-47
 MERGED from [:nativescript_camera:] /home/andrew/.gradle/caches/transforms-1/files-1.1/nativescript_camera.aar/10d98d13b7b7530ef0ed9f24fd2afe84/AndroidManifest.xml:7:5-47

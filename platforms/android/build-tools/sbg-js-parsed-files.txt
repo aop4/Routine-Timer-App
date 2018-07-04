@@ -10,6 +10,7 @@
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/app.module.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/list_tasks/tasklist.component.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/list_tasks/task-selector/task-selector.component.js
+/home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/settings-page/settings.component.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/util.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/app.component.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/tns_modules/nativescript-ui-gauge/ui-gauge.js

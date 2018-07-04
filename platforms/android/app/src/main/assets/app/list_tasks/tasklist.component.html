@@ -1,6 +1,12 @@
 <ActionBar>
-    <StackLayout horizontalAlignment="right" orientation="horizontal">
-        <Label (tap)="newTask()" class="fontawesome icon add-icon" text="&#xf055;"></Label>
+    <StackLayout class="actionbar-cntnr" orientation="horizontal">
+        <!--I do not commit attrocities unless they're required. In an ActionBar, they are.-->
+        <StackLayout horizontalAlignment="left">
+            <Label (tap)="openSettings()" class="fontawesome icon action-icon left flex-left" text="&#xf013;" horizontalAlignment="left"></Label>
+        </StackLayout>
+        <StackLayout horizontalAlignment="right">
+            <Label (tap)="newTask()" class="fontawesome icon action-icon right" text="&#xf055;" horizontalAlignment="right"></Label>
+        </StackLayout>
     </StackLayout>
 </ActionBar>
 <RadListView [items]="taskList">

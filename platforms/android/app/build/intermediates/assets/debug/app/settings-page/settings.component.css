@@ -1,0 +1,30 @@
+ActionBar {
+    margin-bottom: 20;
+}
+
+FlexboxLayout {
+    justify-content: space-between;
+}
+
+.outer-container {
+    padding: 0 30;
+}
+
+.radio-control {
+    padding: 20;
+}
+
+.radio-btn {
+    border-radius: 5;
+    border-width: 1px;
+    height: 30;
+    width: 30;
+}
+
+.switch-container {
+    font-weight: 900;
+}
+
+Label {
+    font-size: 20;
+}

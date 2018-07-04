@@ -1,0 +1,42 @@
+ActionBar {
+    margin-bottom: 20;
+}
+
+FlexboxLayout {
+    justify-content: space-between;
+}
+
+.outer-container {
+    padding: 0 30;
+}
+
+.radio-control {
+    padding: 20;
+}
+
+.radio-btn {
+    border-radius: 5;
+    border-width: 3px;
+    border-color: #222;
+    height: 30;
+    width: 30;
+    margin: 10;
+}
+
+.switch-container {
+    font-weight: 900;
+    padding-top: 20;
+    font-size: 30;
+}
+
+Label {
+    font-size: 20;
+}
+
+.pad-btm {
+    padding-bottom: 10;
+}
+
+.radio-active {
+    background-color: #009688;
+}

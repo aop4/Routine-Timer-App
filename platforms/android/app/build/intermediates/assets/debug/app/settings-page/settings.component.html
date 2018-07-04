@@ -1,0 +1,37 @@
+<ActionBar title="Timer alarm settings"></ActionBar>
+<StackLayout class="outer-container">
+    
+    <FlexboxLayout class="switch-container">
+        <Label text="Play alarm tone"></Label>
+        <Switch></Switch>
+    </FlexboxLayout>
+   
+    <StackLayout class="radio-control">
+        <FlexboxLayout>
+            <Label text="Continuously"></Label>
+            <!--There is literally no cross-platform support for radio buttons... DIY time.-->
+            <StackLayout class="radio-btn"></StackLayout>
+        </FlexboxLayout>
+        <FlexboxLayout>
+            <Label text="Once"></Label>
+            <StackLayout class="radio-btn"></StackLayout>
+        </FlexboxLayout>
+    </StackLayout>
+
+    <FlexboxLayout class="switch-container">
+        <Label text="Vibrate"></Label>
+        <Switch></Switch>
+    </FlexboxLayout>
+
+    <StackLayout class="radio-control">
+        <FlexboxLayout>
+            <Label text="Continuously"></Label>
+            <StackLayout class="radio-btn"></StackLayout>
+        </FlexboxLayout>
+        <FlexboxLayout>
+            <Label text="Once"></Label>
+            <StackLayout class="radio-btn"></StackLayout>
+        </FlexboxLayout>
+    </StackLayout>
+
+</StackLayout>

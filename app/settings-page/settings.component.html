@@ -1,0 +1,37 @@
+<ActionBar title="Timer alarm settings"></ActionBar>
+<StackLayout class="outer-container">
+    
+    <FlexboxLayout class="switch-container">
+        <Label text="Play alarm tone"></Label>
+        <Switch [(ngModel)]="settings.wantsTone"></Switch>
+    </FlexboxLayout>
+   
+    <StackLayout class="radio-control" [visibility] = "settings.wantsTone ? 'visible':'collapsed'">
+        <FlexboxLayout class="pad-btm">
+            <Label text="Continuously"></Label>
+            <!--There is literally no cross-platform support for radio buttons... DIY time.-->
+            <StackLayout class="radio-btn {{ settings.continuousTone ? 'radio-active':'' }}" (tap)="setContinuousTone(true)"></StackLayout>
+        </FlexboxLayout>
+        <FlexboxLayout>
+            <Label text="Once"></Label>
+            <StackLayout class="radio-btn {{ settings.continuousTone ? '':'radio-active' }}" (tap)="setContinuousTone(false)"></StackLayout>
+        </FlexboxLayout>
+    </StackLayout>
+
+    <FlexboxLayout class="switch-container">
+        <Label text="Vibrate"></Label>
+        <Switch [(ngModel)]="settings.wantsVibrate"></Switch>
+    </FlexboxLayout>
+
+    <StackLayout class="radio-control" [visibility] = "settings.wantsVibrate ? 'visible':'collapsed'">
+        <FlexboxLayout>
+            <Label text="Continuously" class="pad-btm"></Label>
+            <StackLayout class="radio-btn {{ settings.continuousVibrate ? 'radio-active':'' }}" (tap)="setContinuousVibrate(true)"></StackLayout>
+        </FlexboxLayout>
+        <FlexboxLayout>
+            <Label text="Once"></Label>
+            <StackLayout class="radio-btn {{ settings.continuousVibrate ? '':'radio-active' }}" (tap)="setContinuousVibrate(false)"></StackLayout>
+        </FlexboxLayout>
+    </StackLayout>
+
+</StackLayout>

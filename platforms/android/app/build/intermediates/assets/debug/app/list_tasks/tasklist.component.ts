@@ -48,5 +48,9 @@ export class TaskListComponent implements OnInit {
         this.router.navigate(["task/edit"]);
     }
 
+    openSettings() {
+        this.router.navigate(["settings"]);
+    }
+
 }
 
