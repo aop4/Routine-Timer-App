@@ -73,10 +73,12 @@ export class SystemDataService {
         this.appSettings.setString("tasks", JSON.stringify(savedTasks));
     }
 
+    /* Return a list of tasks sorted by most recent */
     loadAllTasks() {
         let savedTasks = JSON.parse(this.appSettings.getString("tasks", "{}"));
-        //probs want to sort by date...
-        return Object.keys(savedTasks).map(key => savedTasks[key]);
+        let taskList = Object.keys(savedTasks).map(key => savedTasks[key]);
+        //sort the tasks in descending order of time modified
+        return taskList.sort((a, b) => { return b.modifiedTimestamp - a.modifiedTimestamp });
     }
 
     loadTaskById(id: string) {

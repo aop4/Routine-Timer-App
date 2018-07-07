@@ -29,6 +29,8 @@ export class TaskComponent implements OnInit {
     ngOnInit() {
         //when we're not coming back to this page from the editing page
         this.task = DataRetriever.data;
+        //make sure the audio service is updated with any changes in settings--
+        //like the user deciding they don't want vibration anymore
         this.audioService.refreshSettings();
     }
 

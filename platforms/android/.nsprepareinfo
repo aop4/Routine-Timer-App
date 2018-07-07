@@ -1,5 +1,5 @@
 {
-	"time": "Wed Jul 04 2018 18:46:08 GMT-0400 (EDT)",
+	"time": "Sat Jul 07 2018 16:53:45 GMT-0400 (EDT)",
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
@@ -39,8 +39,8 @@
 		"/home/andrew/NativeScript/TimerApp/app/settings-page/settings.component.ts": "b1bd473f366e0eab9e54055c3c581e909018fe51",
 		"/home/andrew/NativeScript/TimerApp/app/shared/audio.service.js": "b8f2906fb8d8962d1e6be927fc0041a1c485cd40",
 		"/home/andrew/NativeScript/TimerApp/app/shared/audio.service.ts": "7783dd712c60cb7b6fc74be280ef30263af3bcc6",
-		"/home/andrew/NativeScript/TimerApp/app/shared/data.service.js": "c928dca7be420587649b5190124ea12dc383cac3",
-		"/home/andrew/NativeScript/TimerApp/app/shared/data.service.ts": "576c8869f5841e818193a164305640a2e7475bd9",
+		"/home/andrew/NativeScript/TimerApp/app/shared/data.service.js": "52e1c787288bf69e1d52970351488fab72f631b8",
+		"/home/andrew/NativeScript/TimerApp/app/shared/data.service.ts": "c9b596931e846894880f511079ddd99acfec6941",
 		"/home/andrew/NativeScript/TimerApp/app/shared/pass-data.service.js": "8b81a63ec53e6da098b8b08d7a60f09eb035b3f5",
 		"/home/andrew/NativeScript/TimerApp/app/shared/pass-data.service.ts": "e4790989da14934c5ec80ce674eae360a1c102a7",
 		"/home/andrew/NativeScript/TimerApp/app/shared/settings/timer-settings.model.js": "5a0bbd3c02c2b37f008b40ff9bdcb8e4e084f15b",
@@ -59,8 +59,8 @@
 		"/home/andrew/NativeScript/TimerApp/app/step/step.component.ts": "c4790e9be8167ff16c0c0bf50b0a32c76762405a",
 		"/home/andrew/NativeScript/TimerApp/app/task/task.component.css": "bb831a6bf7eba3c3dcc0b4922a690d0e3876c258",
 		"/home/andrew/NativeScript/TimerApp/app/task/task.component.html": "f53243d598b2a47d4aec7fbd533d67c75b62a623",
-		"/home/andrew/NativeScript/TimerApp/app/task/task.component.js": "7d2b7fac503471b6b8edf35410ff222669f2947f",
-		"/home/andrew/NativeScript/TimerApp/app/task/task.component.ts": "487aab4ccc887abdd8d2831187682496da0d1d0d",
+		"/home/andrew/NativeScript/TimerApp/app/task/task.component.js": "b07d9552e3e468adb54a6a461fe0c34c82232cc6",
+		"/home/andrew/NativeScript/TimerApp/app/task/task.component.ts": "e74fb87516abf0c6c16be21e60f14a7258f9932f",
 		"/home/andrew/NativeScript/TimerApp/app/util.js": "86425d97b71d7b8dd1af58c9fef05444399d51ed",
 		"/home/andrew/NativeScript/TimerApp/app/util.ts": "1e50b5967a0a7f2a23cecb5be16b4862d837046b",
 		"/home/andrew/NativeScript/TimerApp/app/fonts/FontAwesome.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb"
