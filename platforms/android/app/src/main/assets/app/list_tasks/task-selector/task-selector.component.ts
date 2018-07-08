@@ -20,12 +20,13 @@ export class TaskSelectorComponent {
     @Input() index: number;
     selected: boolean;
 
-    constructor(private router: Router, private dataService: SystemDataService) {
+    constructor(private router: Router, private dataService: SystemDataService, 
+        private dataRetriever: DataRetriever) {
 
     }
 
     viewTask() {
-        DataRetriever.data = this.task;
+        this.dataRetriever.data = this.task;
         this.router.navigate(["task"]);
     }
 

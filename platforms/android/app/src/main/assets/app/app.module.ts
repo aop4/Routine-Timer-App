@@ -13,6 +13,7 @@ import { AndroidApplication, AndroidActivityBackPressedEventData, android } from
 import { isAndroid } from "platform";
 import { AudioService } from "./shared/audio.service";
 import { SystemDataService } from "~/shared/data.service";
+import { DataRetriever } from "~/shared/pass-data.service";
 
 
 @NgModule({
@@ -29,7 +30,7 @@ import { SystemDataService } from "~/shared/data.service";
     AppComponent,
     ...navigatableComponents
   ],
-  providers: [AudioService, EditStepComponent, SystemDataService],
+  providers: [AudioService, EditStepComponent, SystemDataService, DataRetriever],
   bootstrap: [AppComponent]
 })
 export class AppModule {

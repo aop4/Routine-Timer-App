@@ -71,13 +71,14 @@ export class EditTaskComponent {
     }
 
     constructor(private page: Page, private dataManager: SystemDataService, private modal: ModalDialogService,
-        private vcRef: ViewContainerRef, private router: Router, private location: Location) {
-        let taskData = DataRetriever.data;
+            private vcRef: ViewContainerRef, private router: Router, private location: Location,
+            private dataRetriever: DataRetriever) {
+        let taskData = this.dataRetriever.data;
         this.task = new Task(taskData.name, taskData.description, taskData.steps);
         this.savedTask = <Task>clone(this.task);
         //store the original name of the task so we can retrieve an unadulterated copy in the 
         //TaskComponent (previous page) if the user doesn't save here
-        DataRetriever.identifier = this.task.name.toString(); //the reference to the name is destroyed on back press; copy it
+        this.dataRetriever.identifier = this.task.name.toString(); //the reference to the name is destroyed on back press; copy it
     }
 
     changesNotSaved() {
@@ -117,7 +118,10 @@ export class EditTaskComponent {
         .then((saved) => {
             if (saved) {
                 this.savedTask = <Task>clone(this.task);
-                DataRetriever.identifier = this.task.name;
+                //in case the user changed the name, keep track of the new name so that, if the user 
+                //navigates back to the view the task, they see the task they just saved instead of that with
+                //the old name
+                this.dataRetriever.identifier = this.task.name;
                 return true;
             }
             return false;
@@ -140,7 +144,7 @@ export class EditTaskComponent {
             this.descriptionField.nativeElement.android.clearFocus();
             this.nameField.nativeElement.android.clearFocus();
         }
-        DataRetriever.data = step;
+        this.dataRetriever.data = step;
         let options = {
             context: { step: step },
             viewContainerRef: this.vcRef

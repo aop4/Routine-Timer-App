@@ -20,7 +20,7 @@ export class TaskListComponent implements OnInit {
     taskList: Array<Task>;
 
     viewTask(task: Task) {
-        DataRetriever.data = task;
+        this.dataRetriever.data = task;
         this.router.navigate(["task"]);
     }
 
@@ -32,7 +32,8 @@ export class TaskListComponent implements OnInit {
         this.refreshTasks();
     }
     
-    constructor(private page: Page, private dataManager: SystemDataService, private router: Router) {
+    constructor(private page: Page, private dataManager: SystemDataService, private router: Router,
+            private dataRetriever: DataRetriever) {
         this.page.on(Page.navigatingToEvent, (event: NavigatedData) => {
             if (event.isBackNavigation) {
                 this.refreshTasks();
@@ -44,7 +45,7 @@ export class TaskListComponent implements OnInit {
     newTask() {
         //create a blank activity and navigate to the edit activity
         //page so the user can fill in the details.
-        DataRetriever.data = new Task("", "", []);
+        this.dataRetriever.data = new Task("", "", []);
         this.router.navigate(["task/edit"]);
     }
 
