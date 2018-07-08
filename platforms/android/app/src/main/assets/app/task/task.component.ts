@@ -7,6 +7,7 @@ import { DataRetriever } from "../shared/pass-data.service";
 import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 import { SystemDataService } from "../shared/data.service";
 import { AudioService } from "../shared/audio.service";
+import { Location } from "@angular/common";
 @Component({
     selector: "tmr-task",
     templateUrl: "task/task.component.html",
@@ -17,7 +18,7 @@ export class TaskComponent implements OnInit {
     task: Task;
     
     constructor(private page: Page, private router: Router, private dataManager: SystemDataService,
-      private audioService: AudioService) {
+      private audioService: AudioService, private location: Location) {
         //if we're coming back to this page from the edit page
         this.page.on(Page.navigatingToEvent, (event: NavigatedData) => {
             if (event.isBackNavigation) {
@@ -38,6 +39,10 @@ export class TaskComponent implements OnInit {
         DataRetriever.data = this.task;
         this.router.navigate(["task/edit"]);
         this.audioService.stopAlarm(); //in case an alarm is playing
+    }
+
+    backPress() {
+        this.location.back();
     }
         
 }

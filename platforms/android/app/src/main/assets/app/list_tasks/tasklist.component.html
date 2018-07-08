@@ -1,20 +1,15 @@
 <ActionBar>
-    <StackLayout class="actionbar-cntnr" orientation="horizontal">
-        <!--I do not commit attrocities unless they're required. In an ActionBar, they are.-->
-        <StackLayout horizontalAlignment="left">
-            <Label (tap)="openSettings()" class="fontawesome icon action-icon left flex-left" text="&#xf013;" horizontalAlignment="left"></Label>
-        </StackLayout>
-        <StackLayout horizontalAlignment="right">
-            <Label (tap)="newTask()" class="fontawesome icon action-icon right" text="&#xf055;" horizontalAlignment="right"></Label>
-        </StackLayout>
-    </StackLayout>
+    <GridLayout columns="*" rows="auto">
+        <Label (tap)="openSettings()" class="fontawesome icon action-icon left" row="0" horizontalAlignment="left" text="&#xf013;"></Label>
+        <Label (tap)="newTask()" class="fontawesome icon action-icon right" text="&#xf055;" row="0" horizontalAlignment="right"></Label>
+    </GridLayout>
 </ActionBar>
 <RadListView [items]="taskList">
     <ng-template let-task="item" let-index="index">
         <task-selector [task]="task" [index]="index" [taskList]="taskList"></task-selector>
     </ng-template>
 </RadListView>
-<StackLayout class="msg" [visibility]="taskList.length ? 'hidden':'visible'">
+<StackLayout class="msg" [visibility]="taskList.length ? 'collapsed':'visible'">
     <Label class="new-msg" text="There are no routines to display."></Label>
     <Label class="new-msg link" text="Make a new one!" (tap)="newTask()" textWrap="true"></Label>
 </StackLayout>

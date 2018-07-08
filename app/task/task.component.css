@@ -1,19 +1,8 @@
-.fontawesome {
-    font-size: 40;
+.action-label {
+    font-size: 25;
 }
 
-FlexboxLayout {
-    align-items: center;
+.edit-icon {
+    font-size: 45;
+    padding-right: 10;
 }
-
-.task-name {
-    font-size: 20;
-    width: 80%; /*The wrapped label text can cover up the Edit icon*/
-}
-
-.edit {
-    padding-left: 10;
-}
-
-
-

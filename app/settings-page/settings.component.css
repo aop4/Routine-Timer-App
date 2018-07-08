@@ -4,6 +4,7 @@ ActionBar {
 
 FlexboxLayout {
     justify-content: space-between;
+    align-items: center;
 }
 
 .outer-container {
@@ -29,7 +30,7 @@ FlexboxLayout {
     font-size: 30;
 }
 
-Label {
+Label :not(.action-icon, .action-label) {
     font-size: 20;
 }
 

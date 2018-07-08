@@ -2,17 +2,8 @@
     font-size: 45;
 }
 
-.action-icon.left {
-    margin-right: 50%;
-}
-
-.action-icon.right {
-    margin-left: 50%;
-}
-
-ActionBar {
-    padding-top: 2;
-    padding-bottom: 2;
+.right {
+    padding-right: 15;
 }
 
 StackLayout.msg {

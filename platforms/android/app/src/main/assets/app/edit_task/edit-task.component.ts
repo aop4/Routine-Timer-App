@@ -1,4 +1,4 @@
-import { Component, OnInit, ViewContainerRef } from "@angular/core";
+import { Component, OnInit, ViewContainerRef, ViewChild, ElementRef } from "@angular/core";
 import { isAndroid } from "platform";
 import { Router } from "@angular/router";
 import { Page } from "tns-core-modules/ui/page";
@@ -9,12 +9,13 @@ import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 import { SystemDataService } from "../shared/data.service";
 import { DataRetriever } from "../shared/pass-data.service";
 import { ModalDialogService } from "nativescript-angular/directives/dialogs";
-import { deepEquals, isNonnegativeInteger, clone } from "../util";
+import { deepEquals, isNonnegativeInteger, clone, padTwoDigits } from "../util";
 import { topmost } from "ui/frame";
 import { AndroidApplication, AndroidActivityBackPressedEventData, android } from "application";
 import * as Toast from "nativescript-toast";
 import * as dialogs from "ui/dialogs";
 import {Location} from '@angular/common';
+import { TextView } from "nativescript-angular/forms/value-accessors";
 
 
 @Component({
@@ -26,6 +27,9 @@ export class EditTaskComponent {
 
     task: Task;
     savedTask: Task; //an unmodified copy of the last saved version of this.task
+    padTwoDigits = padTwoDigits; //to use this function from util in the template
+    @ViewChild('nameField') nameField: ElementRef;
+    @ViewChild('descriptionField') descriptionField: ElementRef;
 
     showFailureMsg(msg) {
         let options = {
@@ -120,15 +124,22 @@ export class EditTaskComponent {
         });
     }
 
-    newStep() {
-        //create a new step at the end of task.steps
+    newStep(index) {
+        //create a new step
         let newStep = new Step("", "", 0, 0, 1);
-        this.task.steps.push(newStep);
+        //add newStep to the indexth index of this.task.steps
+        this.task.steps.splice(index, 0, newStep);
         //launch an editing window for the new step
         this.editStepModal(newStep);
     }
 
     editStepModal(step: Step) {
+        //prevent the annoying behavior of scrolling to the page's
+        //last focused text view when the keyboard is used in the modal
+        if (android) {
+            this.descriptionField.nativeElement.android.clearFocus();
+            this.nameField.nativeElement.android.clearFocus();
+        }
         DataRetriever.data = step;
         let options = {
             context: { step: step },

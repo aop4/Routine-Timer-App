@@ -1,4 +1,9 @@
-<ActionBar title="Timer alarm settings"></ActionBar>
+<ActionBar>
+    <GridLayout columns="*" rows="auto">
+        <Label class="fontawesome action-icon" text="&#xf060;" (tap)="backPress()" row="0" horizontalAlignment="left"></Label>
+        <Label class="action-label" text="Timer Alarm Settings" row="0" horizontalAlignment="center"></Label>
+    </GridLayout>
+</ActionBar>
 <StackLayout class="outer-container">
     
     <FlexboxLayout class="switch-container">

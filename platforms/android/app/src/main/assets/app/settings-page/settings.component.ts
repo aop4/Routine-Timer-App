@@ -1,6 +1,7 @@
 import { Component, OnDestroy } from "@angular/core";
 import { SystemDataService } from "~/shared/data.service";
 import { TimerSettings } from "~/shared/settings/timer-settings.model";
+import { Location } from "@angular/common";
 
 @Component({
     selector: "settings",
@@ -11,7 +12,7 @@ export class SettingsComponent implements OnDestroy {
 
     settings: TimerSettings;
 
-    constructor(private dataManager: SystemDataService) {
+    constructor(private dataManager: SystemDataService, private location: Location) {
         this.settings = this.dataManager.getTimerSettings();
     }
 
@@ -25,6 +26,10 @@ export class SettingsComponent implements OnDestroy {
 
     ngOnDestroy() {
         this.dataManager.saveTimerSettings(this.settings);
+    }
+
+    backPress() {
+        this.location.back();
     }
 
 }

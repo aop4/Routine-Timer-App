@@ -4,6 +4,16 @@ ActionBar {
     padding: 10 0;
 }
 
+.action-label {
+  font-size: 22;
+  vertical-align: center;
+}
+
+.action-icon {
+  font-size: 35;
+  vertical-align: center;
+}
+
 Button {
   text-transform: none;
 }

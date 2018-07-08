@@ -3,5 +3,5 @@
         <Label class="task-name" [text]="task.name"></Label>
         <Label class="task-description" [text]="task.description"></Label>
     </StackLayout>
-    <Label class="fontawesome icon" text="&#xf1f8;" (tap)="deleteTask()" [visibility]="selected ? 'visible':'hidden'"></Label>
+    <Label class="fontawesome icon" text="&#xf1f8;" (tap)="deleteTask()" [visibility]="selected ? 'visible':'collapsed'"></Label>
 </FlexboxLayout>
