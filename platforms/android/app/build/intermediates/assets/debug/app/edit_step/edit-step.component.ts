@@ -17,6 +17,7 @@ import { ModalDialogService } from "nativescript-angular/directives/dialogs";
     templateUrl: "edit_step/edit-step.component.html",
     styleUrls: ["edit_step/edit-step.component.css"]
 })
+/* A modal shown over the edit task page for adding/editing a step within a routine */
 export class EditStepComponent implements OnInit {
 
     step: Step; //the step represented by this component
@@ -25,8 +26,13 @@ export class EditStepComponent implements OnInit {
     repetitions: number;
     @ViewChild('container') container: ElementRef;
 
+    constructor(private page: Page, private location: Location, private params: ModalDialogParams,
+        private dataRetriever: DataRetriever) {
+        
+    }
+
     ngOnInit() {
-        this.step = DataRetriever.data;
+        this.step = this.dataRetriever.data;
         this.minutes = this.step.minutes;
         this.seconds = this.step.seconds;
         this.repetitions = this.step.repetitions;
@@ -102,10 +108,6 @@ export class EditStepComponent implements OnInit {
         else {
             return Util.padTwoDigits(val);
         }
-    }
-
-    constructor(private page: Page, private location: Location, private params: ModalDialogParams) {
-        
     }
 
 }

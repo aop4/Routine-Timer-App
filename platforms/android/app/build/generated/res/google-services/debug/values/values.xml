@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">900036978093-0873fr5b8jau922demevah8s0vo0drgs.apps.googleusercontent.com</string>
+    <string name="firebase_database_url" translatable="false">https://timerapp-6762d.firebaseio.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">900036978093</string>
+    <string name="google_api_key" translatable="false">AIzaSyA1WYPESgM8hAQNoiWmTTd4-zM5EcwaIBk</string>
+    <string name="google_app_id" translatable="false">1:900036978093:android:3008d363f7b330c7</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA1WYPESgM8hAQNoiWmTTd4-zM5EcwaIBk</string>
+    <string name="project_id" translatable="false">timerapp-6762d</string>
+</resources>

@@ -6,6 +6,7 @@ import { Step } from "../shared/step/step.model";
 import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 import { SystemDataService } from "../shared/data.service";
 import { DataRetriever } from "../shared/pass-data.service";
+import { EventData } from "data/observable";
 
 import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout/stack-layout";
 
@@ -19,7 +20,7 @@ export class TaskListComponent implements OnInit {
     taskList: Array<Task>;
 
     viewTask(task: Task) {
-        DataRetriever.data = task;
+        this.dataRetriever.data = task;
         this.router.navigate(["task"]);
     }
 
@@ -31,18 +32,20 @@ export class TaskListComponent implements OnInit {
         this.refreshTasks();
     }
     
-    constructor(private page: Page, private dataManager: SystemDataService, private router: Router) {
+    constructor(private page: Page, private dataManager: SystemDataService, private router: Router,
+            private dataRetriever: DataRetriever) {
         this.page.on(Page.navigatingToEvent, (event: NavigatedData) => {
             if (event.isBackNavigation) {
                 this.refreshTasks();
             }
         });
+        this.dataManager.setSettingsIfNone(); //for a fresh install, set user preferences to their defaults
     }
 
     newTask() {
         //create a blank activity and navigate to the edit activity
         //page so the user can fill in the details.
-        DataRetriever.data = new Task("", "", []);
+        this.dataRetriever.data = new Task("", "", []);
         this.router.navigate(["task/edit"]);
     }
 

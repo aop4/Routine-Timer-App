@@ -1,11 +1,9 @@
 .action-icon {
     font-size: 45;
-    /* width: 80%; */
 }
 
-ActionBar {
-    padding-top: 2;
-    padding-bottom: 2;
+.right {
+    padding-right: 15;
 }
 
 StackLayout.msg {

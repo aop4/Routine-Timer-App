@@ -1,9 +1,27 @@
 .ctrl-btns {
-    padding: 20 50;
+    padding: 40 50 10 50;
+}
+
+.ctrl-btn {
+    margin-bottom: 10;
+    width: 75%;
+}
+
+.btn-label {
+    color: #eee;
+    background-color: rgb(124, 189, 250);
+    border-radius: 4;
+    font-size: 20;
 }
 
 .save {
-    padding-right: 30;
+    margin-right: 15;
+    padding: 2 6;
+    font-size: 26;
+    background-color: transparent;
+    border-color: transparent;
+    border-bottom-color: #eee;
+    border-width: 2;
 }
 
 .task-basics {
@@ -16,8 +34,12 @@
     font-size: 30;
 }
 
-Label {
+Label :not(.action-icon, .action-label) {
     font-size: 20;
+    color: #444;
+}
+
+.grey {
     color: #444;
 }
 
@@ -30,8 +52,17 @@ FlexboxLayout.center {
     padding: 15 0;
 }
 
+.step-info {
+    justify-content: space-between;
+}
+
 .step-name {
     padding-left: 10;
+}
+
+.step-time {
+    color: rgb(171, 205, 238);
+    padding-right: 10;
 }
 
 .icon {
@@ -39,15 +70,21 @@ FlexboxLayout.center {
     padding: 0 40;
 }
 
-.save {
-    color: white;
+.add-btn {
+    font-size: 50;
+    padding-bottom: 10;
 }
 
 .task-handle {
     border-color: rgb(124, 189, 250);
     border-bottom-width: 1;
+    border-top-width: 1;
 }
 
-.flex-control {
-    justify-content: space-between;
+.add-step {
+    margin-top: 10;
+}
+
+ScrollView {
+    padding-bottom: 30;
 }

@@ -36,8 +36,16 @@
         "directory": "../../node_modules/nativescript-iqkeyboardmanager"
     },
     {
+        "name": "nativescript-local-notifications",
+        "directory": "../../node_modules/nativescript-local-notifications"
+    },
+    {
         "name": "nativescript-nodeify",
         "directory": "../../node_modules/nativescript-nodeify"
+    },
+    {
+        "name": "nativescript-plugin-firebase",
+        "directory": "../../node_modules/nativescript-plugin-firebase"
     },
     {
         "name": "nativescript-social-share",

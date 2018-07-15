@@ -4,7 +4,7 @@
             "outputFile": "/home/andrew/NativeScript/TimerApp/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sw320dp-v13/values-sw320dp-v13.xml",
             "map": [
                 {
-                    "source": "/home/andrew/.gradle/caches/transforms-1/files-1.1/TNSCalendar-release.aar/605fbcb56f7ee79fb7380f43151718f9/res/values-sw320dp-v13/values-sw320dp-v13.xml",
+                    "source": "/home/andrew/.gradle/caches/transforms-1/files-1.1/TNSCalendar-release.aar/ab8b826e2a7ddac798c05e1dc72deff0/res/values-sw320dp-v13/values-sw320dp-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

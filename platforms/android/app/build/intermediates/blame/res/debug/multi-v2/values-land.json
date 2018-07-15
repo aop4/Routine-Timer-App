@@ -4,7 +4,7 @@
             "outputFile": "/home/andrew/NativeScript/TimerApp/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-land/values-land.xml",
             "map": [
                 {
-                    "source": "/home/andrew/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0499d9f66f3c6b7fb663a89aec944383/res/values-land/values-land.xml",
+                    "source": "/home/andrew/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/aade24bd9cac6a61aa3fd676e02a714d/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2,3,4,5",
                         "startColumns": "4,4,4,4",
@@ -14,7 +14,7 @@
                     }
                 },
                 {
-                    "source": "/home/andrew/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/10f913801a64304ca34cfa4ba14cf737/res/values-land/values-land.xml",
+                    "source": "/home/andrew/.gradle/caches/transforms-1/files-1.1/design-26.0.0-alpha1.aar/b746afb236b1614d75957ce7fa3fa91a/res/values-land/values-land.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

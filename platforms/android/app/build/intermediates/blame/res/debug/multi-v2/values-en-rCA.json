@@ -4,7 +4,7 @@
             "outputFile": "/home/andrew/NativeScript/TimerApp/platforms/android/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-en-rCA/values-en-rCA.xml",
             "map": [
                 {
-                    "source": "/home/andrew/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/0499d9f66f3c6b7fb663a89aec944383/res/values-en-rCA/values-en-rCA.xml",
+                    "source": "/home/andrew/.gradle/caches/transforms-1/files-1.1/appcompat-v7-27.0.2.aar/aade24bd9cac6a61aa3fd676e02a714d/res/values-en-rCA/values-en-rCA.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19",
                         "startColumns": "4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4",

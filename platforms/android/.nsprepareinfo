@@ -1,11 +1,11 @@
 {
-	"time": "Sun Jul 08 2018 19:10:11 GMT-0400 (EDT)",
+	"time": "Sat Jul 14 2018 19:45:31 GMT-0400 (EDT)",
 	"nativePlatformStatus": "3",
 	"bundle": false,
 	"release": false,
-	"changesRequireBuild": false,
-	"projectFileHash": "2bf511f46908a50607d3f257f083b2675b3a66dc8989ca26275709ab89bf37da",
-	"changesRequireBuildTime": "Wed Jul 04 2018 14:13:48 GMT-0400 (EDT)",
+	"changesRequireBuild": true,
+	"projectFileHash": "6eeaf25c80f395084a08db0c25e858dc13d93f4c2b915e7a2e0760a5a162711f",
+	"changesRequireBuildTime": "Sat Jul 14 2018 19:45:31 GMT-0400 (EDT)",
 	"appFilesHashes": {
 		"/home/andrew/NativeScript/TimerApp/app/app.component.js": "fb4407d2c7ad72cd146263e1d45dd814a97c1c57",
 		"/home/andrew/NativeScript/TimerApp/app/app.component.ts": "cc1ff9cf7839037accaa9d3c05c1b654042be980",
