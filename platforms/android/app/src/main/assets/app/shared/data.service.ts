@@ -9,6 +9,8 @@ import { TimerSettings } from "~/shared/settings/timer-settings.model";
 export class SystemDataService {
 
     appSettings = require("application-settings");
+    private timerSettings: TimerSettings = null; //a cached version of the timer settings
+    private tasks = null; //a cached version of the tasks list in the app data
 
     private saveSuccessMessage(taskName: string) {
         Toast.makeText("Save successful!").show();
@@ -20,6 +22,7 @@ export class SystemDataService {
         savedTasks[task.name] = task;
         let newTasks = JSON.stringify(savedTasks);
         this.appSettings.setString("tasks", newTasks);
+        this.tasks = savedTasks;
         this.saveSuccessMessage(task.name);
     }
 
@@ -47,7 +50,7 @@ export class SystemDataService {
     /* Attempts to save task. Returns true on success and false if the user decides not to save. */
     saveNewTask(task: Task, promptForOverwrite: boolean) {
         return new Promise<Boolean>( (resolve) => {
-            var savedTasks = JSON.parse(this.appSettings.getString("tasks", "{}"));
+            var savedTasks = this.getOrCreateTaskList();
             //should show an overwrite modal iff the user didn't get here by intentionally
             //editing the activity they're overwriting, since otherwise it's obvious/annoying
             if (promptForOverwrite && savedTasks[task.name]) {
@@ -67,22 +70,30 @@ export class SystemDataService {
         });
     }
 
+    private getOrCreateTaskList() {
+        if (!this.tasks) {
+            this.tasks = JSON.parse(this.appSettings.getString("tasks", "{}"));
+        }
+        return this.tasks;
+    }
+
     deleteTask(task: Task) {
-        let savedTasks = JSON.parse(this.appSettings.getString("tasks", "{}"));
+        let savedTasks = this.getOrCreateTaskList();
         delete savedTasks[task.name];
         this.appSettings.setString("tasks", JSON.stringify(savedTasks));
+        this.tasks = savedTasks; //update the cached version
     }
 
     /* Return a list of tasks sorted by most recent */
     loadAllTasks() {
-        let savedTasks = JSON.parse(this.appSettings.getString("tasks", "{}"));
+        let savedTasks = this.getOrCreateTaskList();
         let taskList = Object.keys(savedTasks).map(key => savedTasks[key]);
         //sort the tasks in descending order of time modified
         return taskList.sort((a, b) => { return b.modifiedTimestamp - a.modifiedTimestamp });
     }
 
     loadTaskById(id: string) {
-        let savedTasks = JSON.parse(this.appSettings.getString("tasks", "{}"));
+        let savedTasks = this.getOrCreateTaskList();
         return <Task>(savedTasks[id]);
     }
 
@@ -94,12 +105,17 @@ export class SystemDataService {
         if (typeof settings.wantsTone === "undefined") {
             needToSaveSettings = true;
             settings.wantsTone = true;
-            settings.continuousTone = true;
+            settings.continuousTone = false;
         }
         if (typeof settings.wantsVibrate === "undefined") {
             needToSaveSettings = true;
-            settings.wantsVibrate = true; //in case device volume's muted to begin with
-            settings.continuousVibrate = false;
+            settings.wantsVibrate = true;
+            settings.continuousVibrate = true; //I find I prefer vibration for alarms, so this is
+                                                //a default for now
+        }
+        if (typeof settings.wantsNotifications === "undefined") {
+            needToSaveSettings = true;
+            settings.wantsNotifications = false; //don't use notifications by default: can be annoying
         }
         if (needToSaveSettings) {
             this.appSettings.setString("timer_settings", JSON.stringify(settings));
@@ -110,11 +126,16 @@ export class SystemDataService {
     exist since, if they didn't exist, they were re-created when the app started up by
     this.setSettingsIfNone(). */
     getTimerSettings() {
-        return <TimerSettings>JSON.parse(this.appSettings.getString("timer_settings"));
+        //reload this.settings on a fresh restart
+        if (! this.timerSettings) {
+            this.timerSettings = <TimerSettings>JSON.parse(this.appSettings.getString("timer_settings"));
+        }
+        return this.timerSettings;
     }
 
     saveTimerSettings(timerSettings: TimerSettings) {
         this.appSettings.setString("timer_settings", JSON.stringify(timerSettings));
+        this.timerSettings = timerSettings; //update the cached version of the timer settings
     }
 
 }

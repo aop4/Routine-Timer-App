@@ -5,6 +5,9 @@ import { Step } from "../shared/step/step.model";
 import { padTwoDigits } from "../util";
 import { AudioService } from "../shared/audio.service";
 import { start } from "tns-core-modules/application/application";
+import * as LocalNotifications from "nativescript-local-notifications";
+import { NotificationService } from "~/shared/notification.service";
+
 
 @Component({
     selector: "tmr-step",
@@ -23,7 +26,8 @@ export class StepComponent implements OnInit, OnDestroy {
     padTwoDigits = padTwoDigits;
     alarmOn: boolean;
 
-    constructor(private page: Page, private audioService: AudioService) {
+    constructor(private page: Page, private audioService: AudioService,
+        private notificationService: NotificationService) {
         
     }
 
@@ -39,6 +43,7 @@ export class StepComponent implements OnInit, OnDestroy {
     handleTimerEnd() {
         this.stopTimer();
         this.audioService.playAlarm();
+        this.notificationService.makeNotification(this.step.name);
         this.alarmOn = true;
     }
 

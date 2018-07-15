@@ -3,4 +3,5 @@ export class TimerSettings {
     wantsTone: boolean;
     continuousTone: boolean;
     continuousVibrate: boolean;
+    wantsNotifications: boolean;
 }

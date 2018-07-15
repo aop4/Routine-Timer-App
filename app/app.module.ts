@@ -14,6 +14,7 @@ import { isAndroid } from "platform";
 import { AudioService } from "./shared/audio.service";
 import { SystemDataService } from "~/shared/data.service";
 import { DataRetriever } from "~/shared/pass-data.service";
+import { NotificationService } from "~/shared/notification.service";
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { DataRetriever } from "~/shared/pass-data.service";
     AppComponent,
     ...navigatableComponents
   ],
-  providers: [AudioService, EditStepComponent, SystemDataService, DataRetriever],
+  providers: [AudioService, EditStepComponent, SystemDataService, DataRetriever, NotificationService],
   bootstrap: [AppComponent]
 })
 export class AppModule {

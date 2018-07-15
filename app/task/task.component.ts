@@ -8,6 +8,7 @@ import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 import { SystemDataService } from "../shared/data.service";
 import { AudioService } from "../shared/audio.service";
 import { Location } from "@angular/common";
+
 @Component({
     selector: "tmr-task",
     templateUrl: "task/task.component.html",

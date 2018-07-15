@@ -32,8 +32,8 @@
             </ng-template>
         </RadListView>
         <StackLayout class="text-center add-step" [visibility]="task.steps.length ? 'visible':'collapsed'">
-                <Label text="Add Step"></Label>
-                <Label (tap)="newStep(task.steps.length)" class="fontawesome icon grey add-btn" text="&#xf055;"></Label>
+            <Label text="Add Step"></Label>
+            <Label (tap)="newStep(task.steps.length)" class="fontawesome icon grey add-btn" text="&#xf055;"></Label>
         </StackLayout>
         <!-- <StackLayout class="ctrl-btns" [visibility]="task.steps.length ? 'visible':'collapsed'">
             <Button class="btn-label ctrl-btn" text="Save" (tap)="saveTask()"></Button>
