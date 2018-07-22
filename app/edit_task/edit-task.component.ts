@@ -32,6 +32,17 @@ export class EditTaskComponent {
     @ViewChild('descriptionField') descriptionField: ElementRef;
     @ViewChild('stepList') stepList: ElementRef;
 
+    constructor(private page: Page, private dataManager: SystemDataService, private modal: ModalDialogService,
+    private vcRef: ViewContainerRef, private router: Router, private location: Location,
+    private dataRetriever: DataRetriever) {
+        let taskData = this.dataRetriever.data;
+        this.task = new Task(taskData.name, taskData.description, taskData.steps);
+        this.savedTask = <Task>clone(this.task);
+        //store the original name of the task so we can retrieve an unadulterated copy in the 
+        //TaskComponent (previous page) if the user doesn't save here
+        this.dataRetriever.identifier = this.task.name.toString(); //the reference to the name is destroyed on back press; copy it
+    }
+
     showFailureMsg(msg) {
         let options = {
             title: 'Save failed',
@@ -69,17 +80,6 @@ export class EditTaskComponent {
         else {
             this.location.back();
         }
-    }
-
-    constructor(private page: Page, private dataManager: SystemDataService, private modal: ModalDialogService,
-            private vcRef: ViewContainerRef, private router: Router, private location: Location,
-            private dataRetriever: DataRetriever) {
-        let taskData = this.dataRetriever.data;
-        this.task = new Task(taskData.name, taskData.description, taskData.steps);
-        this.savedTask = <Task>clone(this.task);
-        //store the original name of the task so we can retrieve an unadulterated copy in the 
-        //TaskComponent (previous page) if the user doesn't save here
-        this.dataRetriever.identifier = this.task.name.toString(); //the reference to the name is destroyed on back press; copy it
     }
 
     changesNotSaved() {

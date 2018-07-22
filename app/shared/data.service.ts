@@ -72,7 +72,7 @@ export class SystemDataService {
 
     private getOrCreateTaskList() {
         if (!this.tasks) {
-            this.tasks = JSON.parse(this.appSettings.getString("tasks", "{}"));
+            this.refreshCache();
         }
         return this.tasks;
     }
@@ -91,10 +91,15 @@ export class SystemDataService {
         //sort the tasks in descending order of time modified
         return taskList.sort((a, b) => { return b.modifiedTimestamp - a.modifiedTimestamp });
     }
-
+    
+    /* Returns the stored version of the task with a name == id, as it's written in the machine. */
     loadTaskById(id: string) {
-        let savedTasks = this.getOrCreateTaskList();
-        return <Task>(savedTasks[id]);
+        this.refreshCache();
+        return this.tasks[id];
+    }
+
+    private refreshCache() {
+        this.tasks = JSON.parse(this.appSettings.getString("tasks", "{}"));
     }
 
     /* Reset the settings to their defaults if they've never been set or have been wiped from memory
