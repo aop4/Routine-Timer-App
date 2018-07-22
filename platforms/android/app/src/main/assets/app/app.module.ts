@@ -15,7 +15,8 @@ import { AudioService } from "./shared/audio.service";
 import { SystemDataService } from "~/shared/data.service";
 import { DataRetriever } from "~/shared/pass-data.service";
 import { NotificationService } from "~/shared/notification.service";
-
+import { FirebaseService } from "~/shared/firebase.service";
+import { ShareTaskService } from "~/shared/share-task.service"
 
 @NgModule({
   imports: [
@@ -31,7 +32,15 @@ import { NotificationService } from "~/shared/notification.service";
     AppComponent,
     ...navigatableComponents
   ],
-  providers: [AudioService, EditStepComponent, SystemDataService, DataRetriever, NotificationService],
+  providers: [
+    AudioService, 
+    EditStepComponent, 
+    SystemDataService, 
+    DataRetriever, 
+    NotificationService,
+    FirebaseService,
+    ShareTaskService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -38,12 +38,12 @@ public final class R {
         public static final int center = 0x7f08004e;
         public static final int centerCrop = 0x7f08004f;
         public static final int centerInside = 0x7f080050;
-        public static final int fitCenter = 0x7f08009b;
-        public static final int fitEnd = 0x7f08009c;
-        public static final int fitStart = 0x7f08009d;
-        public static final int fitXY = 0x7f08009e;
-        public static final int focusCrop = 0x7f0800a0;
-        public static final int none = 0x7f0800cf;
+        public static final int fitCenter = 0x7f08009a;
+        public static final int fitEnd = 0x7f08009b;
+        public static final int fitStart = 0x7f08009c;
+        public static final int fitXY = 0x7f08009d;
+        public static final int focusCrop = 0x7f08009f;
+        public static final int none = 0x7f0800ce;
     }
     public static final class styleable {
         public static final int[] GenericDraweeView = { 0x7f030034, 0x7f03004d, 0x7f0300c4, 0x7f0300c5, 0x7f0300c6, 0x7f030143, 0x7f030152, 0x7f030153, 0x7f03015c, 0x7f03015e, 0x7f03015f, 0x7f030160, 0x7f03016b, 0x7f03016c, 0x7f03016f, 0x7f030171, 0x7f030172, 0x7f030173, 0x7f030174, 0x7f030175, 0x7f030176, 0x7f030177, 0x7f030178, 0x7f030179, 0x7f0301f4 };

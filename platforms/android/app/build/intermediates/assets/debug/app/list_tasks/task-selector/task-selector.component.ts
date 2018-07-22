@@ -4,6 +4,7 @@ import { Task } from "../../shared/task/task.model";
 import { DataRetriever } from "../../shared/pass-data.service";
 import { SystemDataService } from "../../shared/data.service";
 import * as dialogs from "ui/dialogs";
+import { FirebaseService } from "~/shared/firebase.service";
 
 //import { EventData } from "data/observable";
 //import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout/stack-layout";

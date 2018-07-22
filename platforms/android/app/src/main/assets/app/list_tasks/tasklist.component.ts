@@ -1,14 +1,14 @@
-import { Component, OnInit, ElementRef } from "@angular/core";
-import { Router, NavigationExtras } from "@angular/router";
+import { Component, OnInit } from "@angular/core";
+import { Router } from "@angular/router";
 import { Page, NavigatedData } from "tns-core-modules/ui/page";
 import { Task } from "../shared/task/task.model";
-import { Step } from "../shared/step/step.model";
-import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 import { SystemDataService } from "../shared/data.service";
 import { DataRetriever } from "../shared/pass-data.service";
-import { EventData } from "data/observable";
-
-import { StackLayout } from "tns-core-modules/ui/layouts/stack-layout/stack-layout";
+import * as dialogs from "ui/dialogs";
+import { FirebaseService } from "~/shared/firebase.service";
+import * as Toast from "nativescript-toast";
+import * as SocialShare from "nativescript-social-share";
+import { ShareTaskService } from "~/shared/share-task.service";
 
 @Component({
     selector: "tmr-task-list",
@@ -30,10 +30,11 @@ export class TaskListComponent implements OnInit {
 
     ngOnInit() {
         this.refreshTasks();
+        this.firebaseService.initializeFirebase();
     }
     
     constructor(private page: Page, private dataManager: SystemDataService, private router: Router,
-            private dataRetriever: DataRetriever) {
+            private dataRetriever: DataRetriever, private firebaseService: FirebaseService) {
         this.page.on(Page.navigatingToEvent, (event: NavigatedData) => {
             if (event.isBackNavigation) {
                 this.refreshTasks();
@@ -51,6 +52,40 @@ export class TaskListComponent implements OnInit {
 
     openSettings() {
         this.router.navigate(["settings"]);
+    }
+
+    promptToDownloadTask() {
+        //prompt for an ID
+        dialogs.prompt({
+            title: "Download a task",
+            message: "Did someone share a task with you? Enter the task's 8-character code (case insensitive).",
+            inputType: dialogs.inputType.text,
+            okButtonText: "OK",
+            cancelButtonText: "Cancel"
+        }).then((res) => {
+            //if the user pressed OK
+            if (res.result) {
+                this.downloadTask(res.text);
+            }
+        });
+    }
+
+    downloadTask(taskID: string) {
+        this.firebaseService.getTask(taskID).then((result) => {
+            if (result.value === null) {
+                this.downloadFailed();
+            }
+            else {
+                this.dataManager.saveNewTask(result.value, true)
+                .then(() => this.refreshTasks());
+            }
+        });
+    }
+
+    downloadFailed() {
+        let toast = Toast.makeText("Unable to retrieve that task.");
+        toast.show();
+        this.promptToDownloadTask();
     }
 
 }

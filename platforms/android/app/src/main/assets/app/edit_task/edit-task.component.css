@@ -26,12 +26,12 @@
 
 .task-basics {
     padding: 20;
-    margin-bottom: 10;
+    margin: 0 0 1 0;
     background-color: rgb(124, 189, 250);
 }
 
 .task-name {
-    font-size: 30;
+    font-size: 25;
 }
 
 Label :not(.action-icon, .action-label) {
@@ -83,8 +83,9 @@ FlexboxLayout.center {
 
 .add-step {
     margin-top: 10;
+    background-color: #fff;
 }
 
-ScrollView {
-    padding-bottom: 30;
+RadListView {
+    background-color: #fff;
 }

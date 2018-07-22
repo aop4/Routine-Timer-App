@@ -31,6 +31,11 @@ Button {
     color: white;
 }
 
+.share-icon {
+  font-size: 42;
+  vertical-align: center;
+}
+
 Label {
   font-size: 20;
 }

@@ -30,6 +30,7 @@ export class EditTaskComponent {
     padTwoDigits = padTwoDigits; //to use this function from util in the template
     @ViewChild('nameField') nameField: ElementRef;
     @ViewChild('descriptionField') descriptionField: ElementRef;
+    @ViewChild('stepList') stepList: ElementRef;
 
     showFailureMsg(msg) {
         let options = {
@@ -133,8 +134,17 @@ export class EditTaskComponent {
         let newStep = new Step("", "", 0, 0, 1);
         //add newStep to the indexth index of this.task.steps
         this.task.steps.splice(index, 0, newStep);
+        //scroll the ListView to the new step
+        this.scrollStepListToIndex(index);
         //launch an editing window for the new step
         this.editStepModal(newStep);
+    }
+    
+    /* Causes the steps list view to scroll to its indexth item. */
+    scrollStepListToIndex(index) {
+        let listView = <RadListView>this.stepList.nativeElement;
+        listView.refresh(); //ensures an item just added to the steps array is loaded
+        listView.scrollToIndex(index); //don't animate--async behavior causes glitches here
     }
 
     editStepModal(step: Step) {

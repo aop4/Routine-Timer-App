@@ -1,10 +1,14 @@
 <ScrollView>
 	<StackLayout>
 		<ActionBar>
-			<GridLayout rows="auto" columns="*">
-				<Label class="fontawesome action-icon" text="&#xf060;" (tap)="backPress()" row="0" horizontalAlignment="left"></Label>
-				<Label class="action-label" textWrap="true" [text]="task.name" row="0" horizontalAlignment="center"></Label>
-				<Label (tap)="editTask()" class="fontawesome edit-icon" text="&#xf044;" row="0" horizontalAlignment="right"></Label>
+			<GridLayout rows="auto" columns="auto, *, auto">
+				<Label class="fontawesome action-icon pad-right" text="&#xf060;" (tap)="backPress()"
+				row="0" col="0" horizontalAlignment="left"></Label>
+				<Label class="action-label" [text]="task.name" row="0" col="1" horizontalAlignment="center"></Label>
+				<StackLayout orientation="horizontal" row="0" horizontalAlignment="right" col="2">
+					<Label (tap)="shareTask()" class="fontawesome action-icon share-icon" text="&#xf1e1;"></Label>
+					<Label (tap)="editTask()" class="fontawesome edit-icon" text="&#xf044;"></Label>
+				</StackLayout>
 			</GridLayout>
 		</ActionBar>
 		<StackLayout *ngFor="let item of task.steps">

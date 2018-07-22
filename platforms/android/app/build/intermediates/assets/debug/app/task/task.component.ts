@@ -8,6 +8,8 @@ import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 import { SystemDataService } from "../shared/data.service";
 import { AudioService } from "../shared/audio.service";
 import { Location } from "@angular/common";
+import { FirebaseService } from "~/shared/firebase.service";
+
 @Component({
     selector: "tmr-task",
     templateUrl: "task/task.component.html",
@@ -18,7 +20,8 @@ export class TaskComponent implements OnInit {
     task: Task;
     
     constructor(private page: Page, private router: Router, private dataManager: SystemDataService,
-      private audioService: AudioService, private location: Location, private dataRetriever: DataRetriever) {
+      private audioService: AudioService, private location: Location, private dataRetriever: DataRetriever,
+      private firebaseService: FirebaseService) {
         //if we're coming back to this page from the edit page
         this.page.on(Page.navigatingToEvent, (event: NavigatedData) => {
             if (event.isBackNavigation) {

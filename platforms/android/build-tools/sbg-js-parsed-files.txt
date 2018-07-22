@@ -1,8 +1,10 @@
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/main.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/data.service.js
+/home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/firebase.service.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/status-bar-util.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/step/step.model.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/audio.service.js
+/home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/notification.service.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/settings/timer-settings.model.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/pass-data.service.js
 /home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/assets/app/shared/task/task.model.js

@@ -2,12 +2,11 @@ import { Component, OnInit } from "@angular/core";
 import { Router } from "@angular/router";
 import { Page, NavigatedData } from "tns-core-modules/ui/page";
 import { Task } from "../shared/task/task.model";
-import { Step } from "../shared/step/step.model";
 import { DataRetriever } from "../shared/pass-data.service";
-import { ListViewEventData, RadListView } from "nativescript-ui-listview";
 import { SystemDataService } from "../shared/data.service";
 import { AudioService } from "../shared/audio.service";
 import { Location } from "@angular/common";
+import { ShareTaskService } from "~/shared/share-task.service";
 
 @Component({
     selector: "tmr-task",
@@ -19,7 +18,8 @@ export class TaskComponent implements OnInit {
     task: Task;
     
     constructor(private page: Page, private router: Router, private dataManager: SystemDataService,
-      private audioService: AudioService, private location: Location, private dataRetriever: DataRetriever) {
+      private audioService: AudioService, private location: Location, private dataRetriever: DataRetriever,
+      private shareTaskService: ShareTaskService) {
         //if we're coming back to this page from the edit page
         this.page.on(Page.navigatingToEvent, (event: NavigatedData) => {
             if (event.isBackNavigation) {
@@ -43,6 +43,10 @@ export class TaskComponent implements OnInit {
 
     backPress() {
         this.location.back();
+    }
+
+    shareTask() {
+        this.shareTaskService.shareTask(this.task);
     }
         
 }

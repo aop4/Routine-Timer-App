@@ -12,5 +12,9 @@ Label.task-name {
 
 .icon {
     color: #555;
+    padding: 0 10;
 }
 
+Label {
+    vertical-align: center;
+}

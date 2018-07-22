@@ -1,23 +1,18 @@
 <ActionBar>
     <GridLayout rows="auto" columns="*">
-        <Label class="fontawesome action-icon" text="&#xf060;" (tap)="backPress()" row="0" horizontalAlignment="left"></Label>
-        <Label (tap)="saveTask()" class="action-label btn-label save" text="Save" horizontalAlignment="right" row="0"></Label>
+        <Label class="fontawesome action-icon" text="&#xf060;" (tap)="backPress()" row="0"
+        horizontalAlignment="left"></Label>
+        <Label (tap)="saveTask()" class="action-label btn-label save" text="Save"
+        horizontalAlignment="right" row="0"></Label>
     </GridLayout>
 </ActionBar>
-<ScrollView>
     <StackLayout>
-		<StackLayout class="task-basics">
-            <Label text="Name (required)"></Label>
-            <TextView #nameField class="task-name input input-border" hint="Soup recipe" [(ngModel)]="task.name"></TextView>
-            <Label text="Description"></Label>
-            <TextView #descriptionField hint="Describe this task (optional)" [(ngModel)]="task.description"></TextView>
+        <StackLayout class="task-basics">
+            <TextView #nameField class="task-name" hint="Routine Name (required)" [(ngModel)]="task.name"></TextView>
+            <TextView #descriptionField hint="Describe this routine (optional)" [(ngModel)]="task.description"></TextView>
         </StackLayout>
-        <StackLayout class="text-center add-step">
-            <Label text="Add Step"></Label>
-            <Label (tap)="newStep(0)" class="fontawesome icon grey add-btn" text="&#xf055;"></Label>
-        </StackLayout>
-        <RadListView [items]="task.steps" itemReorder="true" Drag="true">
-            <ng-template let-step="item" let-index="index">
+        <RadListView #stepList [items]="task.steps" itemReorder="true" Drag="true">
+            <ng-template tkListItemTemplate let-step="item" let-index="index">
                 <StackLayout class="task-handle">
                     <FlexboxLayout class="step-info">
                         <Label class="step-name" [text]="step.name"></Label>
@@ -30,14 +25,15 @@
                     </FlexboxLayout>
                 </StackLayout>
             </ng-template>
+            <ng-template tkListViewFooter>
+                <StackLayout class="text-center add-step">
+                    <Label text="Add Step"></Label>
+                    <Label (tap)="newStep(task.steps.length)" class="fontawesome icon grey add-btn" text="&#xf055;"></Label>
+                </StackLayout>
+            </ng-template>
         </RadListView>
-        <StackLayout class="text-center add-step" [visibility]="task.steps.length ? 'visible':'collapsed'">
-            <Label text="Add Step"></Label>
-            <Label (tap)="newStep(task.steps.length)" class="fontawesome icon grey add-btn" text="&#xf055;"></Label>
-        </StackLayout>
         <!-- <StackLayout class="ctrl-btns" [visibility]="task.steps.length ? 'visible':'collapsed'">
             <Button class="btn-label ctrl-btn" text="Save" (tap)="saveTask()"></Button>
             <Button class="btn-label ctrl-btn" text="Cancel" (tap)="backPress()"></Button>
         </StackLayout> -->
     </StackLayout>
-</ScrollView>
