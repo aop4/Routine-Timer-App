@@ -1,0 +1,11 @@
+<GridLayout columns="*, auto" class="container" (tap)="viewTask()" (longPress)="toggleSelected()" 
+[backgroundColor]="selected ? '#90caf9':'#fff'">
+    <StackLayout col="0">
+        <Label class="task-name" [text]="task.name"></Label>
+        <Label class="task-description" [text]="task.description"></Label>
+    </StackLayout>
+    <StackLayout orientation="horizontal" [visibility]="selected ? 'visible':'collapsed'" col="1">
+        <Label class="fontawesome icon" text="&#xf1e1;" (tap)="shareTask(task)"></Label>
+        <Label class="fontawesome icon" text="&#xf1f8;" (tap)="deleteTask()"></Label>
+    </StackLayout>
+</GridLayout>

@@ -1,0 +1,20 @@
+Label.task-name {
+    font-size: 22;
+}
+
+.container {
+    padding: 20;
+    justify-content: space-between;
+    align-items: center;
+    border-color: rgb(124, 189, 250, 0.3);
+    border-bottom-width: 2;
+}
+
+.icon {
+    color: #555;
+    padding: 0 10;
+}
+
+Label {
+    vertical-align: center;
+}

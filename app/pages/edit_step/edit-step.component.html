@@ -1,0 +1,15 @@
+<Page #page>
+    <StackLayout #container class="step">
+        <Label class="fontawesome icon link" text="&#xf00d;" (tap)="closeModal()" horizontalAlignment="right"></Label>
+        <TextField hint="Name of step (required)" [(ngModel)]="step.name"></TextField>
+        <TextView hint="Description (optional)                 " [(ngModel)]="step.description"></TextView>
+        <Label text="Time (optional)"></Label>
+        <FlexboxLayout class="time-setter">
+            <TextField class="time monospace" hint="mm" keyboardType="number" maxLength="2" [text]="padTwoDigits(minutes)" (textChange)="updateMinutes($event)"></TextField>
+            <Label text=":"></Label>
+            <TextField class="time monospace" hint="ss" keyboardType="number" maxLength="2" [text]="padTwoDigits(seconds)" (textChange)="updateSeconds($event)"></TextField>
+        </FlexboxLayout>
+        <Label text="Repetitions"></Label>
+        <TextField [text]="repetitions" (textChange)="updateRepetitions($event)" maxLength="2" class="reps" horizontalAlignment="left" keyboardType="number"></TextField>
+    </StackLayout>
+</Page>

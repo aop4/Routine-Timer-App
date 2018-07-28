@@ -1,10 +1,10 @@
-import { TaskComponent } from "./task/task.component";
-import { StepComponent } from "./step/step.component";
-import { EditStepComponent } from "./edit_step/edit-step.component";
-import { EditTaskComponent } from "./edit_task/edit-task.component";
-import { TaskListComponent } from "./list_tasks/tasklist.component";
-import { TaskSelectorComponent } from "./list_tasks/task-selector/task-selector.component";
-import { SettingsComponent } from "~/settings-page/settings.component";
+import { TaskComponent } from "./pages/task/task.component";
+import { StepComponent } from "./pages/step/step.component";
+import { EditStepComponent } from "./pages/edit_step/edit-step.component";
+import { EditTaskComponent } from "./pages/edit_task/edit-task.component";
+import { TaskListComponent } from "./pages/list_tasks/tasklist.component";
+import { TaskSelectorComponent } from "./pages/list_tasks/task-selector/task-selector.component";
+import { SettingsComponent } from "~/pages/settings-page/settings.component";
 
 export const routes = [
     { path: "", component: TaskListComponent },

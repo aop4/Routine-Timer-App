@@ -1,8 +1,8 @@
 import { Injectable } from "@angular/core";
-import { Task } from "./task/task.model";
-import { EventData } from "data/observable";
 import * as dialogs from "ui/dialogs";
 import * as Toast from "nativescript-toast";
+
+import { Task } from "./task/task.model";
 import { TimerSettings } from "~/shared/settings/timer-settings.model";
 
 @Injectable()

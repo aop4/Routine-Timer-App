@@ -1,0 +1,13 @@
+.big-action-icon {
+    font-size: 45;
+}
+
+.pad-right {
+    padding-right: 15;
+}
+
+StackLayout.msg {
+    padding: 80 30 0 30;
+    text-align: center;
+}
+

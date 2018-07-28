@@ -1,0 +1,32 @@
+FlexboxLayout {
+    align-items: center;
+    justify-content: center;
+}
+
+.timeDisplay {
+    padding: 10;
+}
+
+StackLayout.container {
+    padding: 15;
+    border-color: rgb(124, 189, 250, 0.3);
+    border-bottom-width: 2;
+}
+
+.step-name {
+    font-size: 24;
+}
+
+.description {
+    font-size: 16;
+}
+
+.light {
+    color: #ddd;
+}
+
+.icon {
+    color: #009688;
+    font-size: 60;
+    padding: 0 10;
+}

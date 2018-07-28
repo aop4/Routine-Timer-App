@@ -1,6 +1,7 @@
 import { Injectable } from "@angular/core";
 import { android } from "tns-core-modules/application/application";
 import { Vibrate } from 'nativescript-vibrate';
+
 import { TimerSettings } from "~/shared/settings/timer-settings.model";
 import { SystemDataService } from "~/shared/data.service";
 

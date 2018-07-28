@@ -1,7 +1,8 @@
 import { Injectable } from "@angular/core";
 import * as dialogs from "ui/dialogs";
-import { FirebaseService } from "~/shared/firebase.service";
 import * as SocialShare from "nativescript-social-share";
+
+import { FirebaseService } from "~/shared/firebase.service";
 import { Task } from "~/shared/task/task.model";
 
 @Injectable()

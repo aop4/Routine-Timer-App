@@ -1,5 +1,6 @@
 import { Injectable } from "@angular/core";
 import * as firebase from "nativescript-plugin-firebase";
+
 import { Task } from "~/shared/task/task.model";
 
 @Injectable()
@@ -7,6 +8,7 @@ export class FirebaseService {
 
     UUID_LENGTH: number = 8;
     UUID_ALPHABET: string = "ABCDEFGHJKLMNPRSTUVWXYZ23456789";
+    initialized: boolean = false; //whether the firebase instance has been initialized
     
     /* Generates a short pseudo-unique UUID generated from characters that a user can
     easily type and distinguish from one another. I could not find a pre-built module
@@ -26,8 +28,12 @@ export class FirebaseService {
     only access an individual task from the app, so it's not really worth trying in the first place.
     This method initializes access to Firebase and authenticates the user. */
     initializeFirebase() {
+        if (this.initialized) {
+            return;
+        }
         firebase.init({})
         .then(() => {
+            this.initialized = true;
             return firebase.login({type: firebase.LoginType.ANONYMOUS});
         });
     }

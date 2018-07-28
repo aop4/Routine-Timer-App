@@ -1,6 +1,7 @@
 import * as LocalNotifications from "nativescript-local-notifications";
 import { Injectable } from "@angular/core";
 import { resumeEvent, suspendEvent, on as applicationOn } from "application";
+
 import { SystemDataService } from "~/shared/data.service";
 
 @Injectable()
