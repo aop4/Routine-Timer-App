@@ -9,7 +9,7 @@
         </FlexboxLayout>
         <FlexboxLayout>
             <Label class="fontawesome icon" [text]="timerOn ? '&#xf28c;':'&#xf01d;'" (tap)="playPauseBtnAction()"></Label>
-            <Label class="fontawesome icon" [text]="(timerOn || paused) ? '&#xf021;':'&#xf28e;'" (tap)="resetTimer()"
+            <Label class="fontawesome icon" [text]="timerOn ? '&#xf021;':'&#xf28e;'" (tap)="resetTimer()"
             [visibility]="(timerOn || alarmOn || paused) ? 'visible':'collapsed'"></Label>
         </FlexboxLayout>
     </StackLayout>
