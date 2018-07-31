@@ -6,8 +6,9 @@ import { Task } from "~/shared/task/task.model";
 @Injectable()
 export class FirebaseService {
 
-    UUID_LENGTH: number = 8;
-    UUID_ALPHABET: string = "ABCDEFGHJKLMNPRSTUVWXYZ23456789";
+    UUID_LENGTH: number = 8; //the length of task UUIDs in the database
+    UUID_ALPHABET: string = "ABCDEFGHJKLMNPRSTUVWXYZ23456789"; //letter used in UUIDs
+    //Together there are 8^31 ~= 1 trillion possible UUIDs
     initialized: boolean = false; //whether the firebase instance has been initialized
     
     /* Generates a short pseudo-unique UUID generated from characters that a user can
@@ -21,7 +22,7 @@ export class FirebaseService {
         return uuid;
     }
 
-    /* Welcome to the database. It's only possible to read one task/routine at a time. There are over
+    /* Welcome to the database. It's only possible to read one task/routine at a time. There about
     a trillion possible task IDs. So authentication isn't really important: the likelihood that you'll
     ever make that many requests is... 0. It would probably take over 3 million days, after which
     Firebase will probably not exist, as it will be something like the 114th century. But you can still
@@ -38,10 +39,14 @@ export class FirebaseService {
         });
     }
     
-    /* Adds a task to the database at a randomly generated path */
+    /* Adds a task to the database at a randomly generated path. Returns
+    a promise that resolves with the generated path UUID on success.  */
     addTask(task: Task) {
+        //generate a UUID for the task
         let uuid = this.generateUUID();
         return new Promise<string>((resolve, reject) => {
+            //store the task in the database at the path
+            // /routine/<generated uuid>
             firebase.setValue("/routine/" + uuid, task)
             .then( () => resolve(uuid), () => reject())
         });

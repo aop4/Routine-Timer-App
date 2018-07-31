@@ -23,6 +23,7 @@ export class TaskComponent implements OnInit {
       private shareTaskService: ShareTaskService) {
         //if we're coming back to this page from the edit page
         this.page.on(Page.navigatingToEvent, (event: NavigatedData) => {
+            //reload the task in case the user changed it
             if (event.isBackNavigation) {
                 this.task = this.dataManager.loadTaskById(this.dataRetriever.identifier);
             }
@@ -30,12 +31,15 @@ export class TaskComponent implements OnInit {
     }
 
     ngOnInit() {
+        //load the task
         this.task = this.dataRetriever.data;
         //make sure the audio service is updated with any changes in settings--
         //like the user deciding they don't want vibration anymore
         this.audioService.refreshSettings();
     }
 
+    /* Brings the user to a page where they can edit the task they're currently
+    viewing. */
     editTask() {
         this.dataRetriever.data = this.task;
         this.router.navigate(["task/edit"]);
@@ -46,6 +50,7 @@ export class TaskComponent implements OnInit {
         this.location.back();
     }
 
+    /* Pop up a menu the user can use to share the current task with other users */
     shareTask() {
         this.shareTaskService.shareTask(this.task);
     }

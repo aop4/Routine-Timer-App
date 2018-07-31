@@ -12,6 +12,7 @@ export class Task {
         this.steps = steps;
     }
 
+    /* Delete the indexth step of this task */
     removeStep(index: number) {
         this.steps.splice(index, 1);
     }

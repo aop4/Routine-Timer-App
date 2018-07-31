@@ -11,10 +11,13 @@ export class NotificationService {
     lastNotificationId: number = 0; //the most recent notification's id
 
     constructor(private dataService: SystemDataService) {
+        //when the user brings up the application after viewing
+        //another app or the display being off
         applicationOn(resumeEvent, () => {
              this.setAppInView(true);
              this.clearAllNotifications(); //so the user doesn't have to cancel them manually
         });
+        //when the user views another application or the display turns off
         applicationOn(suspendEvent, () => this.setAppInView(false));
     }
 
@@ -31,8 +34,9 @@ export class NotificationService {
         }
     }
 
-    /* if the app isn't being displayed on the user's screen right now,
-    send a local notification saying that a step's timer has ended */
+    /* if the app isn't being displayed on the user's screen right now
+    and the user wants notifications, send a local notification saying
+    that a step's timer has ended */
     makeNotification(stepName: string) {
         if (!this.appInView && this.dataService.getTimerSettings().wantsNotifications) {
             LocalNotifications.schedule([{

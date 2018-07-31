@@ -23,12 +23,15 @@ export class TaskListComponent implements OnInit {
         this.router.navigate(["task"]);
     }
 
+    /* Re-retrieves the tasks in the page from memory */
     refreshTasks() {
         this.taskList = this.dataManager.loadAllTasks();
     }
 
     ngOnInit() {
+        //load the tasks from the database
         this.refreshTasks();
+        //initialize connection to database
         this.firebaseService.initializeFirebase();
     }
     
@@ -49,10 +52,12 @@ export class TaskListComponent implements OnInit {
         this.router.navigate(["task/edit"]);
     }
 
+    /* Navigates to the settings page */
     openSettings() {
         this.router.navigate(["settings"]);
     }
 
+    /* Prompt the user to download a task, and attempt to download it if desired. */
     promptToDownloadTask() {
         //prompt for an ID
         dialogs.prompt({
@@ -69,18 +74,23 @@ export class TaskListComponent implements OnInit {
         });
     }
 
+    /* Download a task, and if it exists, save it and refresh the task list */
     downloadTask(taskID: string) {
         this.firebaseService.getTask(taskID).then((result) => {
             if (result.value === null) {
+                //display a message saying this task doesn't exist
                 this.downloadFailed();
             }
             else {
+                //save the task to the system
                 this.dataManager.saveNewTask(result.value, true)
+                //refresh the tasks list
                 .then(() => this.refreshTasks());
             }
         });
     }
 
+    /* display a message indicating a task id the user entered task doesn't exist */
     downloadFailed() {
         let toast = Toast.makeText("Unable to retrieve that task.");
         toast.show();
