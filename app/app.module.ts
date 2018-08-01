@@ -13,7 +13,8 @@ import { SystemDataService } from "~/shared/data.service";
 import { DataRetriever } from "~/shared/pass-data.service";
 import { NotificationService } from "~/shared/notification.service";
 import { FirebaseService } from "~/shared/firebase.service";
-import { ShareTaskService } from "~/shared/share-task.service"
+import { ShareTaskService } from "~/shared/share-task.service";
+import { ConnectivityCheckService } from "~/shared/connectivity-checker.service";
 
 @NgModule({
   imports: [
@@ -36,7 +37,8 @@ import { ShareTaskService } from "~/shared/share-task.service"
     DataRetriever, 
     NotificationService,
     FirebaseService,
-    ShareTaskService
+    ShareTaskService,
+    ConnectivityCheckService
   ],
   bootstrap: [AppComponent]
 })

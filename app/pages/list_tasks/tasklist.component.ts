@@ -8,6 +8,7 @@ import { Task } from "../../shared/task/task.model";
 import { SystemDataService } from "../../shared/data.service";
 import { DataRetriever } from "../../shared/pass-data.service";
 import { FirebaseService } from "~/shared/firebase.service";
+import { ConnectivityCheckService } from "~/shared/connectivity-checker.service";
 
 @Component({
     selector: "tmr-task-list",
@@ -36,7 +37,8 @@ export class TaskListComponent implements OnInit {
     }
     
     constructor(private page: Page, private dataManager: SystemDataService, private router: Router,
-            private dataRetriever: DataRetriever, private firebaseService: FirebaseService) {
+            private dataRetriever: DataRetriever, private firebaseService: FirebaseService,
+            private connectivityService: ConnectivityCheckService) {
         this.page.on(Page.navigatingToEvent, (event: NavigatedData) => {
             if (event.isBackNavigation) {
                 this.refreshTasks();
@@ -57,8 +59,24 @@ export class TaskListComponent implements OnInit {
         this.router.navigate(["settings"]);
     }
 
+    /* If the user has an internet connection, begin the process of downloading a task */
+    taskDownload() {
+        this.connectivityService.checkConnection()
+        .then(() => {
+            //if there's an internet connection
+            this.giveDownloadPrompt();
+        }, () => {
+            //if there's not
+            dialogs.alert({
+                title: "No Connection",
+                message: "You must have an internet connection to download a task.",
+                okButtonText: "OK"
+            });
+        });
+    }
+
     /* Prompt the user to download a task, and attempt to download it if desired. */
-    promptToDownloadTask() {
+    giveDownloadPrompt() {
         //prompt for an ID
         dialogs.prompt({
             title: "Download a task",
@@ -94,7 +112,7 @@ export class TaskListComponent implements OnInit {
     downloadFailed() {
         let toast = Toast.makeText("Unable to retrieve that task.");
         toast.show();
-        this.promptToDownloadTask();
+        this.taskDownload();
     }
 
 }

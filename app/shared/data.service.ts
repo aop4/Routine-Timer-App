@@ -126,7 +126,7 @@ export class SystemDataService {
     }
 
     /* Scan the user's app settings and set them to their defaults if they've
-    never been set or have been wiped from memory (and so are undefined) */
+    never been set or have been somehow wiped from memory (and so are undefined) */
     setSettingsIfNone() {
         let needToSaveSettings = false; //whether the settings need to be saved to the system
         let settings = <TimerSettings>JSON.parse(this.appSettings.getString("timer_settings", "{}"));
