@@ -23,6 +23,7 @@ export class StepComponent implements OnInit, OnDestroy {
     timerOn = false;
     paused = false; //whether the timer is paused mid-timing (so the reset button knows
                     //to be visible when timer's paused)
+    currentRepetition: number = 0; //which repetition is in progress for a timed step
     padTwoDigits = padTwoDigits;
     alarmOn: boolean;
 
@@ -122,7 +123,7 @@ export class StepComponent implements OnInit, OnDestroy {
         this.stopTimer();
     }
 
-    /*  */
+    /* Restarts the timer for this step at the top of the clock */
     resetTimer() {
         //if the timer's already going and the user is restarting it as it goes
         if (this.timerOn) {
@@ -147,6 +148,11 @@ export class StepComponent implements OnInit, OnDestroy {
         }
         else {
             this.startTimer();
+            //if the timer is being restarted from the beginning
+            //or after the timer ran out of time
+            if (!this.paused) {
+                this.currentRepetition++;
+            }
         }
     }
 
