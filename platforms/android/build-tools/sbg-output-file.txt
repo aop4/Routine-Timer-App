@@ -1,1 +1,0 @@
-/home/andrew/NativeScript/TimerApp/platforms/android/app/src/main/java
