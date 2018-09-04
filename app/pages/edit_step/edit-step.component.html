@@ -5,7 +5,7 @@
         <TextView hint="Description (optional)                 " [(ngModel)]="step.description"></TextView>
         <Label text="Time (optional)"></Label>
         <FlexboxLayout class="time-setter">
-            <TextField class="time monospace" hint="m" keyboardType="number" maxLength="1" [text]="minutes ? minutes : ''" (textChange)="updateMinutes($event)"></TextField>
+            <TextField class="time monospace" hint="mm" keyboardType="number" maxLength="2" [text]="padTwoDigits(minutes)" (textChange)="updateMinutes($event)"></TextField>
             <Label text=":"></Label>
             <TextField class="time monospace" hint="ss" keyboardType="number" maxLength="2" [text]="padTwoDigits(seconds)" (textChange)="updateSeconds($event)"></TextField>
         </FlexboxLayout>

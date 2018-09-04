@@ -5,7 +5,7 @@
         <Label class="task-description" [text]="task.description"></Label>
     </StackLayout>
     <StackLayout orientation="horizontal" [visibility]="selected ? 'visible':'collapsed'" col="1">
-        <Label class="fontawesome icon" text="&#xf1e1;" (tap)="shareTask(task)"></Label>
+        <Label class="fontawesome icon" text="&#xf1e1;" (tap)="shareTask()"></Label>
         <Label class="fontawesome icon" text="&#xf1f8;" (tap)="deleteTask()"></Label>
     </StackLayout>
 </GridLayout>

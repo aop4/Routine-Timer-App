@@ -41,3 +41,7 @@ Label :not(.action-icon, .action-label) {
 .radio-active {
     background-color: #009688;
 }
+
+.disclaimer {
+    font-size: 14;
+}

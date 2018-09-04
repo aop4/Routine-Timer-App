@@ -11,8 +11,8 @@
 				</StackLayout>
 			</GridLayout>
 		</ActionBar>
-		<StackLayout *ngFor="let item of task.steps">
-			<tmr-step [step]="item"></tmr-step>
+		<StackLayout *ngFor="let item of task.steps; index as i">
+			<tmr-step [step]="item" [index]="i" [parentTask]="task"></tmr-step>
 		</StackLayout>
 	</StackLayout>
 </ScrollView>

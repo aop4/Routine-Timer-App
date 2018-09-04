@@ -4,44 +4,49 @@
         <Label class="action-label" text="Timer Alarm Settings" row="0" horizontalAlignment="center"></Label>
     </GridLayout>
 </ActionBar>
-<StackLayout class="outer-container">
+<ScrollView>
+    <StackLayout class="outer-container">
+        
+        <FlexboxLayout class="switch-container">
+            <Label text="Play alarm tone"></Label>
+            <Switch [(ngModel)]="settings.wantsTone"></Switch>
+        </FlexboxLayout>
     
-    <FlexboxLayout class="switch-container">
-        <Label text="Play alarm tone"></Label>
-        <Switch [(ngModel)]="settings.wantsTone"></Switch>
-    </FlexboxLayout>
-   
-    <StackLayout class="radio-control" [visibility] = "settings.wantsTone ? 'visible':'collapsed'">
-        <FlexboxLayout class="pad-btm">
-            <Label text="Continuously"></Label>
-            <!--There is literally no cross-platform support for radio buttons... DIY time.-->
-            <StackLayout class="radio-btn {{ settings.continuousTone ? 'radio-active':'' }}" (tap)="setContinuousTone(true)"></StackLayout>
+        <StackLayout class="radio-control" [visibility] = "settings.wantsTone ? 'visible':'collapsed'">
+            <FlexboxLayout class="pad-btm">
+                <Label text="Continuously"></Label>
+                <!--There is literally no cross-platform support for radio buttons... DIY time.-->
+                <StackLayout class="radio-btn {{ settings.continuousTone ? 'radio-active':'' }}" (tap)="setContinuousTone(true)"></StackLayout>
+            </FlexboxLayout>
+            <FlexboxLayout>
+                <Label text="Once"></Label>
+                <StackLayout class="radio-btn {{ settings.continuousTone ? '':'radio-active' }}" (tap)="setContinuousTone(false)"></StackLayout>
+            </FlexboxLayout>
+        </StackLayout>
+
+        <FlexboxLayout class="switch-container">
+            <Label text="Vibrate"></Label>
+            <Switch [(ngModel)]="settings.wantsVibrate"></Switch>
         </FlexboxLayout>
-        <FlexboxLayout>
-            <Label text="Once"></Label>
-            <StackLayout class="radio-btn {{ settings.continuousTone ? '':'radio-active' }}" (tap)="setContinuousTone(false)"></StackLayout>
-        </FlexboxLayout>
+
+        <StackLayout class="radio-control" [visibility] = "settings.wantsVibrate ? 'visible':'collapsed'">
+            <FlexboxLayout>
+                <Label text="Continuously" class="pad-btm"></Label>
+                <StackLayout class="radio-btn {{ settings.continuousVibrate ? 'radio-active':'' }}" (tap)="setContinuousVibrate(true)"></StackLayout>
+            </FlexboxLayout>
+            <FlexboxLayout>
+                <Label text="Once"></Label>
+                <StackLayout class="radio-btn {{ settings.continuousVibrate ? '':'radio-active' }}" (tap)="setContinuousVibrate(false)"></StackLayout>
+            </FlexboxLayout>
+        </StackLayout>
+
+        <!-- <FlexboxLayout class="switch-container">
+                <Label text="Send me a notification"></Label>
+                <Switch [(ngModel)]="settings.wantsNotifications"></Switch>
+        </FlexboxLayout> -->
+
+        <Label class="disclaimer" textWrap="true"
+            text="Note: These settings only apply if the application is active. Otherwise a normal notification occurs."></Label>
+
     </StackLayout>
-
-    <FlexboxLayout class="switch-container">
-        <Label text="Vibrate"></Label>
-        <Switch [(ngModel)]="settings.wantsVibrate"></Switch>
-    </FlexboxLayout>
-
-    <StackLayout class="radio-control" [visibility] = "settings.wantsVibrate ? 'visible':'collapsed'">
-        <FlexboxLayout>
-            <Label text="Continuously" class="pad-btm"></Label>
-            <StackLayout class="radio-btn {{ settings.continuousVibrate ? 'radio-active':'' }}" (tap)="setContinuousVibrate(true)"></StackLayout>
-        </FlexboxLayout>
-        <FlexboxLayout>
-            <Label text="Once"></Label>
-            <StackLayout class="radio-btn {{ settings.continuousVibrate ? '':'radio-active' }}" (tap)="setContinuousVibrate(false)"></StackLayout>
-        </FlexboxLayout>
-    </StackLayout>
-
-    <FlexboxLayout class="switch-container">
-            <Label text="Send me a notification"></Label>
-            <Switch [(ngModel)]="settings.wantsNotifications"></Switch>
-    </FlexboxLayout>
-
-</StackLayout>
+</ScrollView>

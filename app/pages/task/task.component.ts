@@ -8,6 +8,7 @@ import { DataRetriever } from "../../shared/pass-data.service";
 import { SystemDataService } from "../../shared/data.service";
 import { AudioService } from "../../shared/audio.service";
 import { ShareTaskService } from "~/shared/share-task.service";
+import { KeepAwakeService } from "~/shared/keepawake.service";
 
 @Component({
     selector: "tmr-task",
@@ -20,13 +21,17 @@ export class TaskComponent implements OnInit {
     
     constructor(private page: Page, private router: Router, private dataManager: SystemDataService,
       private audioService: AudioService, private location: Location, private dataRetriever: DataRetriever,
-      private shareTaskService: ShareTaskService) {
+      private shareTaskService: ShareTaskService, private keepAwakeService: KeepAwakeService) {
         //if we're coming back to this page from the edit page
         this.page.on(Page.navigatingToEvent, (event: NavigatedData) => {
             //reload the task in case the user changed it
             if (event.isBackNavigation) {
                 this.task = this.dataManager.loadTaskById(this.dataRetriever.identifier);
             }
+            this.keepAwakeService.keepScreenOn();
+        });
+        this.page.on(Page.navigatingFromEvent, () => {
+            this.keepAwakeService.letScreenTurnOff();
         });
     }
 

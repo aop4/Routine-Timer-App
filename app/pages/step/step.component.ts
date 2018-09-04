@@ -5,6 +5,8 @@ import { Step } from "../../shared/step/step.model";
 import { padTwoDigits } from "../../util";
 import { AudioService } from "../../shared/audio.service";
 import { NotificationService } from "~/shared/notification.service";
+import { Task } from "~/shared/task/task.model";
+import { DataRetriever } from "~/shared/pass-data.service";
 
 
 @Component({
@@ -17,6 +19,8 @@ associated steps, timers, etc. */
 export class StepComponent implements OnInit, OnDestroy {
 
     @Input() step: Step; //input from parent component
+    @Input() parentTask: Task; //the step's parent task object
+    @Input() index: number; //the step's index in its parent task's array
     interval: number; //an ID for a JS interval
     seconds: number; //a copy of step.seconds that's lowered as time passes
     minutes: number; //a copy of step.minutes that's lowered as time passes
@@ -28,7 +32,8 @@ export class StepComponent implements OnInit, OnDestroy {
     alarmOn: boolean;
 
     constructor(private page: Page, private audioService: AudioService,
-        private notificationService: NotificationService) {
+        private notificationService: NotificationService,
+        private dataRetriever: DataRetriever) {
         
     }
 
@@ -49,9 +54,6 @@ export class StepComponent implements OnInit, OnDestroy {
         this.stopTimer();
         //play the alarm (if the user wants an alarm)
         this.audioService.playAlarm();
-        //send a notification if the user has left the app or their display
-        //is off, and they want notifications
-        this.notificationService.makeNotification(this.step.name);
         //used to control the UI components
         this.alarmOn = true;
     }
@@ -112,6 +114,13 @@ export class StepComponent implements OnInit, OnDestroy {
         this.timerOn = true;
         //create an interval that decrements the timer
         this.createInterval();
+        this.scheduleNotification();
+    }
+
+    /* Schedule a notification to go off when the timer is up. */
+    scheduleNotification() {
+        this.notificationService.scheduleNotification(this.parentTask, this.step,
+            this.index, this.minutes, this.seconds);
     }
 
     /* Pauses the timer */
@@ -121,6 +130,7 @@ export class StepComponent implements OnInit, OnDestroy {
         }
         this.paused = true;
         this.stopTimer();
+        this.notificationService.cancelNotificationFor(this.parentTask, this.index);
     }
 
     /* Restarts the timer for this step at the top of the clock */
@@ -138,6 +148,7 @@ export class StepComponent implements OnInit, OnDestroy {
         this.stopAlarm();
         this.minutes = this.step.minutes;
         this.seconds = this.step.seconds;
+        this.scheduleNotification(); //schedule (or reschedule) the notification
     }
 
     /* Handles both the play and pause features. Basically, if the play button is being displayed,

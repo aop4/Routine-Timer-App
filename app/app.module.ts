@@ -15,6 +15,7 @@ import { NotificationService } from "~/shared/notification.service";
 import { FirebaseService } from "~/shared/firebase.service";
 import { ShareTaskService } from "~/shared/share-task.service";
 import { ConnectivityCheckService } from "~/shared/connectivity-checker.service";
+import { KeepAwakeService } from "~/shared/keepawake.service";
 
 @NgModule({
   imports: [
@@ -38,7 +39,8 @@ import { ConnectivityCheckService } from "~/shared/connectivity-checker.service"
     NotificationService,
     FirebaseService,
     ShareTaskService,
-    ConnectivityCheckService
+    ConnectivityCheckService,
+    KeepAwakeService
   ],
   bootstrap: [AppComponent]
 })
