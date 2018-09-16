@@ -158,12 +158,12 @@ export class StepComponent implements OnInit, OnDestroy {
             this.pauseTimer();
         }
         else {
-            this.startTimer();
             //if the timer is being restarted from the beginning
             //or after the timer ran out of time
             if (!this.paused) {
                 this.currentRepetition++;
             }
+            this.startTimer();
         }
     }
 
