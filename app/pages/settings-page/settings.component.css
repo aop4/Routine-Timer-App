@@ -45,3 +45,7 @@ Label :not(.action-icon, .action-label) {
 .disclaimer {
     font-size: 14;
 }
+
+.notification-switch {
+    margin-bottom: 30;
+}

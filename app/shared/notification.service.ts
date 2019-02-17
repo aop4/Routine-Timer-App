@@ -7,6 +7,7 @@ import { Router } from "@angular/router";
 import { Step } from "~/shared/step/step.model";
 import { Task } from "~/shared/task/task.model";
 import { AudioService } from "~/shared/audio.service";
+import { TimerSettings } from "./settings/timer-settings.model";
 
 @Injectable()
 export class NotificationService {
@@ -15,6 +16,7 @@ export class NotificationService {
                           //scheduled for corresponding steps
     lastNotificationId: number = 0; //the most recent notification's id
     appInView: boolean = true;
+    settings: TimerSettings;
 
     constructor(private dataService: SystemDataService, private audioService: AudioService) {
         //when the user brings up the application after viewing
@@ -25,6 +27,10 @@ export class NotificationService {
         });
         //when the user views another application or the display turns off
         applicationOn(suspendEvent, () => this.setAppInView(false));
+    }
+
+    refreshSettings() {
+        this.settings = this.dataService.getTimerSettings();
     }
 
     setAppInView(val: boolean) {
@@ -53,9 +59,13 @@ export class NotificationService {
 
     /* Schedules a notification to occur after the specified number of minutes and 
     seconds go by. If the step given as input is already represented in
-    notificationSet, its scheduled notification will be overwritten. */
+    notificationSet, its scheduled notification will be overwritten. If
+    notifications are turned off in the settings, nothing is scheduled. */
     scheduleNotification(task: Task, step: Step, stepIndex: number, minutes: number,
-    seconds: number) {
+        seconds: number) {
+        if (!this.settings.wantsNotifications) {
+            return;
+        }
         //generate an identifier for the step
         let stepId = this.generateStepId(task, stepIndex);
         //get a notification ID for the notification to schedule

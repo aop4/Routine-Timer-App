@@ -41,6 +41,8 @@ export class StepComponent implements OnInit, OnDestroy {
     ngOnInit() {
         this.minutes = this.step.minutes;
         this.seconds = this.step.seconds;
+        // update alarm settings in case user just changed them
+        this.notificationService.refreshSettings();
     }
 
     /* Turn off vibration/alarm tones when the user navigates away from the page */

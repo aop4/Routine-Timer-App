@@ -1,5 +1,6 @@
 import { Component, OnDestroy } from "@angular/core";
 import { Location } from "@angular/common";
+import { Switch } from "tns-core-modules/ui/switch/switch";
 
 import { SystemDataService } from "~/shared/data.service";
 import { TimerSettings } from "~/shared/settings/timer-settings.model";
@@ -34,6 +35,13 @@ export class SettingsComponent implements OnDestroy {
 
     backPress() {
         this.location.back();
+    }
+
+    onNotificationToggle(event) {
+        let switchRef = <Switch>event.object;
+        if (!switchRef.checked) {
+            alert('Turning notifications off will prevent the app from notifying you that a timed event is over if the application is closed or inactive.');
+        }
     }
 
 }

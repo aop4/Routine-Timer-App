@@ -40,13 +40,14 @@
             </FlexboxLayout>
         </StackLayout>
 
-        <!-- <FlexboxLayout class="switch-container">
-                <Label text="Send me a notification"></Label>
-                <Switch [(ngModel)]="settings.wantsNotifications"></Switch>
-        </FlexboxLayout> -->
-
         <Label class="disclaimer" textWrap="true"
-            text="Note: These settings only apply if the application is active. Otherwise a normal notification occurs."></Label>
+            text="Note: Vibration and alarm tones apply only if the application is active."></Label>
+        
+        <FlexboxLayout class="switch-container notification-switch">
+            <Label text="Send me a notification"></Label>
+            <Switch [(ngModel)]="settings.wantsNotifications"
+                (checkedChange)="onNotificationToggle($event)"></Switch>
+        </FlexboxLayout>   
 
     </StackLayout>
 </ScrollView>
