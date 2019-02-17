@@ -9,7 +9,8 @@
         
         <FlexboxLayout class="switch-container">
             <Label text="Play alarm tone"></Label>
-            <Switch [(ngModel)]="settings.wantsTone"></Switch>
+            <Switch [(ngModel)]="settings.wantsTone"
+                (checkedChange)="saveSettingsWithDelay()"></Switch>
         </FlexboxLayout>
     
         <StackLayout class="radio-control" [visibility] = "settings.wantsTone ? 'visible':'collapsed'">
@@ -26,7 +27,8 @@
 
         <FlexboxLayout class="switch-container">
             <Label text="Vibrate"></Label>
-            <Switch [(ngModel)]="settings.wantsVibrate"></Switch>
+            <Switch [(ngModel)]="settings.wantsVibrate"
+                (checkedChange)="saveSettingsWithDelay()"></Switch>
         </FlexboxLayout>
 
         <StackLayout class="radio-control" [visibility] = "settings.wantsVibrate ? 'visible':'collapsed'">
