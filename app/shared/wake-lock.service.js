@@ -1,0 +1,33 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var core_1 = require("@angular/core");
+var application = require("tns-core-modules/application/application");
+var WakeLockService = /** @class */ (function (_super) {
+    __extends(WakeLockService, _super);
+    function WakeLockService() {
+        return _super !== null && _super.apply(this, arguments) || this;
+    }
+    //this service uses
+    WakeLockService.prototype.onHandleIntent = function (intent) {
+        console.log("Starting wakelock service");
+        this.acquireWakeLock();
+    };
+    WakeLockService.prototype.acquireWakeLock = function () {
+        var PowerManager = android.os.PowerManager;
+        var powerManager = application.android.context.getSystemService(android.content.Context.POWER_SERVICE);
+        this.wakelock = powerManager.newWakeLock(PowerManager.PARTIAL_WAKE_LOCK, "RoutineTimer");
+        this.wakelock.acquire();
+        console.log("Acquired new wake lock");
+    };
+    WakeLockService.prototype.releaseWakeLock = function () {
+        this.wakelock.release();
+        console.log("Released wake lock");
+    };
+    WakeLockService = __decorate([
+        JavaProxy("com.andrewpuglionesi.com.routinetimer.WakelockService"),
+        core_1.Injectable()
+    ], WakeLockService);
+    return WakeLockService;
+}(com.pip3r4o.android.app.IntentService));
+exports.WakeLockService = WakeLockService;
+//# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJmaWxlIjoid2FrZS1sb2NrLnNlcnZpY2UuanMiLCJzb3VyY2VSb290IjoiIiwic291cmNlcyI6WyJ3YWtlLWxvY2suc2VydmljZS50cyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiOztBQUFBLHNDQUEyQztBQUMzQyxzRUFBd0U7QUFPeEU7SUFBcUMsbUNBQXFDO0lBQTFFOztJQXNCQSxDQUFDO0lBcEIrQyxtQkFBbUI7SUFFckQsd0NBQWMsR0FBeEIsVUFBeUIsTUFBOEI7UUFFbkQsT0FBTyxDQUFDLEdBQUcsQ0FBQywyQkFBMkIsQ0FBQyxDQUFDO1FBQ3pDLElBQUksQ0FBQyxlQUFlLEVBQUUsQ0FBQztJQUMzQixDQUFDO0lBRUQseUNBQWUsR0FBZjtRQUNJLElBQU0sWUFBWSxHQUFHLE9BQU8sQ0FBQyxFQUFFLENBQUMsWUFBWSxDQUFDO1FBQzdDLElBQUksWUFBWSxHQUE0QixXQUFXLENBQUMsT0FBTyxDQUFDLE9BQU8sQ0FBQyxnQkFBZ0IsQ0FBQyxPQUFPLENBQUMsT0FBTyxDQUFDLE9BQU8sQ0FBQyxhQUFhLENBQUMsQ0FBQztRQUNoSSxJQUFJLENBQUMsUUFBUSxHQUFxQyxZQUFZLENBQUMsV0FBVyxDQUFDLFlBQVksQ0FBQyxpQkFBaUIsRUFBRSxjQUFjLENBQUMsQ0FBQztRQUMzSCxJQUFJLENBQUMsUUFBUSxDQUFDLE9BQU8sRUFBRSxDQUFDO1FBQ3hCLE9BQU8sQ0FBQyxHQUFHLENBQUMsd0JBQXdCLENBQUMsQ0FBQztJQUMxQyxDQUFDO0lBRUQseUNBQWUsR0FBZjtRQUNJLElBQUksQ0FBQyxRQUFRLENBQUMsT0FBTyxFQUFFLENBQUM7UUFDeEIsT0FBTyxDQUFDLEdBQUcsQ0FBQyxvQkFBb0IsQ0FBQyxDQUFDO0lBQ3RDLENBQUM7SUFyQlEsZUFBZTtRQUYzQixTQUFTLENBQUMsdURBQXVELENBQUM7UUFDbEUsaUJBQVUsRUFBRTtPQUNBLGVBQWUsQ0FzQjNCO0lBQUQsc0JBQUM7Q0FBQSxBQXRCRCxDQUFxQyxHQUFHLENBQUMsT0FBTyxDQUFDLE9BQU8sQ0FBQyxHQUFHLENBQUMsYUFBYSxHQXNCekU7QUF0QlksMENBQWUiLCJzb3VyY2VzQ29udGVudCI6WyJpbXBvcnQgeyBJbmplY3RhYmxlIH0gZnJvbSBcIkBhbmd1bGFyL2NvcmVcIjtcbmltcG9ydCAqIGFzIGFwcGxpY2F0aW9uIGZyb20gXCJ0bnMtY29yZS1tb2R1bGVzL2FwcGxpY2F0aW9uL2FwcGxpY2F0aW9uXCI7XG5cbmltcG9ydCB7IGhlbGxvIH0gZnJvbSBcIn4vc2hhcmVkL3Rlc3RcIjtcblxuZGVjbGFyZSB2YXIgY29tOiBhbnlcbkBKYXZhUHJveHkoXCJjb20uYW5kcmV3cHVnbGlvbmVzaS5jb20ucm91dGluZXRpbWVyLldha2Vsb2NrU2VydmljZVwiKVxuQEluamVjdGFibGUoKVxuZXhwb3J0IGNsYXNzIFdha2VMb2NrU2VydmljZSBleHRlbmRzIGNvbS5waXAzcjRvLmFuZHJvaWQuYXBwLkludGVudFNlcnZpY2Uge1xuICAgIHdha2Vsb2NrOiBhbmRyb2lkLm9zLlBvd2VyTWFuYWdlci5XYWtlTG9jazsgLy90aGUgc2luZ3VsYXIgd2FrZSBsb2NrXG4gICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAgICAvL3RoaXMgc2VydmljZSB1c2VzXG5cbiAgICBwcm90ZWN0ZWQgb25IYW5kbGVJbnRlbnQoaW50ZW50OiBhbmRyb2lkLmNvbnRlbnQuSW50ZW50KTogdm9pZCB7XG4gICAgICAgIFxuICAgICAgICBjb25zb2xlLmxvZyhcIlN0YXJ0aW5nIHdha2Vsb2NrIHNlcnZpY2VcIik7XG4gICAgICAgIHRoaXMuYWNxdWlyZVdha2VMb2NrKCk7XG4gICAgfVxuXG4gICAgYWNxdWlyZVdha2VMb2NrKCkge1xuICAgICAgICBjb25zdCBQb3dlck1hbmFnZXIgPSBhbmRyb2lkLm9zLlBvd2VyTWFuYWdlcjtcbiAgICAgICAgbGV0IHBvd2VyTWFuYWdlciA9IDxhbmRyb2lkLm9zLlBvd2VyTWFuYWdlcj5hcHBsaWNhdGlvbi5hbmRyb2lkLmNvbnRleHQuZ2V0U3lzdGVtU2VydmljZShhbmRyb2lkLmNvbnRlbnQuQ29udGV4dC5QT1dFUl9TRVJWSUNFKTtcbiAgICAgICAgdGhpcy53YWtlbG9jayA9IDxhbmRyb2lkLm9zLlBvd2VyTWFuYWdlci5XYWtlTG9jaz5wb3dlck1hbmFnZXIubmV3V2FrZUxvY2soUG93ZXJNYW5hZ2VyLlBBUlRJQUxfV0FLRV9MT0NLLCBcIlJvdXRpbmVUaW1lclwiKTtcbiAgICAgICAgdGhpcy53YWtlbG9jay5hY3F1aXJlKCk7XG4gICAgICAgIGNvbnNvbGUubG9nKFwiQWNxdWlyZWQgbmV3IHdha2UgbG9ja1wiKTtcbiAgICB9XG5cbiAgICByZWxlYXNlV2FrZUxvY2soKSB7XG4gICAgICAgIHRoaXMud2FrZWxvY2sucmVsZWFzZSgpO1xuICAgICAgICBjb25zb2xlLmxvZyhcIlJlbGVhc2VkIHdha2UgbG9ja1wiKTtcbiAgICB9XG59XG4iXX0=
