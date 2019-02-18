@@ -1,8 +1,8 @@
 <Page #page>
     <StackLayout #container class="step">
         <Label class="fontawesome icon link" text="&#xf00d;" (tap)="closeModal()" horizontalAlignment="right"></Label>
-        <TextField hint="Name of step (required)" [(ngModel)]="step.name"></TextField>
-        <TextView hint="Description (optional)                 " [(ngModel)]="step.description"></TextView>
+        <TextField hint="Name of exercise (required)" [(ngModel)]="step.name"></TextField>
+        <TextView hint="Instructions (optional)                 " [(ngModel)]="step.description"></TextView>
         <Label text="Time (optional)"></Label>
         <FlexboxLayout class="time-setter">
             <TextField class="time monospace" hint="mm" keyboardType="number" maxLength="2" [text]="padTwoDigits(minutes)" (textChange)="updateMinutes($event)"></TextField>

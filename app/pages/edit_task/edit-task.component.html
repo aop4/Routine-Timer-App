@@ -2,13 +2,17 @@
     <GridLayout rows="auto" columns="*">
         <Label class="fontawesome action-icon" text="&#xf060;" (tap)="backPress()" row="0"
         horizontalAlignment="left"></Label>
+        <Label class="action-label" 
+            text="Edit Routine"
+            horizontalAlignment="center"
+            row="0"></Label>
         <Label (tap)="saveTask()" class="action-label btn-label save" text="Save"
         horizontalAlignment="right" row="0"></Label>
     </GridLayout>
 </ActionBar>
     <StackLayout>
         <StackLayout class="task-basics">
-            <TextView #nameField class="task-name" hint="Routine Name (required)" [(ngModel)]="task.name"></TextView>
+            <TextView #nameField class="task-name" hint="Routine name (required)" [(ngModel)]="task.name"></TextView>
             <TextView #descriptionField hint="Describe this routine (optional)" [(ngModel)]="task.description"></TextView>
         </StackLayout>
         <RadListView #stepList [items]="task.steps" itemReorder="true" Drag="true">
@@ -27,7 +31,7 @@
             </ng-template>
             <ng-template tkListViewFooter>
                 <StackLayout class="text-center add-step">
-                    <Label text="Add Step"></Label>
+                    <Label text="Add exercise"></Label>
                     <Label (tap)="newStep(task.steps.length)" class="fontawesome icon grey add-btn" text="&#xf055;"></Label>
                 </StackLayout>
             </ng-template>

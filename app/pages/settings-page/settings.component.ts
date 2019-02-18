@@ -58,7 +58,7 @@ export class SettingsComponent implements OnDestroy {
         this.saveSettingsWithDelay();
         let switchRef = <Switch>event.object;
         if (!switchRef.checked) {
-            alert('Turning notifications off will prevent the app from notifying you that a timed event is over if the application is closed or inactive.');
+            alert('Turning notifications off will prevent the app from notifying you that a timed event is over if the application is closed or inactive for long periods.');
         }
     }
 

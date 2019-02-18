@@ -11,3 +11,7 @@ StackLayout.msg {
     text-align: center;
 }
 
+.new-routine-bottom {
+    text-align: center;
+    padding-top: 10;
+}

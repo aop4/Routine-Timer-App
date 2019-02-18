@@ -185,7 +185,7 @@ export class EditTaskComponent {
     indexth step of the task. Deletes the task if they confirm. */
     deleteStep(index: number) {
         let options = {
-            title: "Delete this step?",
+            title: "Delete this exercise?",
             message: "",
             okButtonText: "Delete",
             cancelButtonText: "Cancel"

@@ -1,18 +1,30 @@
 <ActionBar>
     <GridLayout columns="*" rows="auto">
         <Label (tap)="openSettings()" class="fontawesome icon big-action-icon" row="0" horizontalAlignment="left" text="&#xf013;"></Label>
+        <Label class="action-label"
+            text="My Routines"
+            horizontalAlignment="center"></Label>
         <StackLayout orientation="horizontal" row="0" horizontalAlignment="right">
             <!-- <Label (tap)="taskDownload()" class="fontawesome icon share-icon pad-right" text="&#xf0ed;"></Label> -->
             <Label (tap)="newTask()" class="fontawesome icon big-action-icon pad-right" text="&#xf055;"></Label>
         </StackLayout>
     </GridLayout>
 </ActionBar>
-<RadListView [items]="taskList">
-    <ng-template let-task="item" let-index="index">
-        <task-selector [task]="task" [index]="index" [taskList]="taskList"></task-selector>
-    </ng-template>
-</RadListView>
-<StackLayout class="msg" [visibility]="taskList.length ? 'collapsed':'visible'">
-    <Label class="new-msg" text="There are no routines to display."></Label>
-    <Label class="new-msg link" text="Make a new one!" (tap)="newTask()" textWrap="true"></Label>
+<StackLayout>
+    <RadListView [items]="taskList">
+        <ng-template let-task="item" let-index="index">
+            <task-selector [task]="task" [index]="index" [taskList]="taskList"></task-selector>
+        </ng-template>
+    </RadListView>
+    <StackLayout class="msg" [visibility]="taskList.length ? 'collapsed':'visible'">
+        <Label class="new-msg" text="There are no routines to display."></Label>
+        <Label class="new-msg link" text="Make a new one!" (tap)="newTask()" textWrap="true"></Label>
+    </StackLayout>
+    <StackLayout class="new-routine-bottom"
+        [visibility]="taskList.length ? 'visible':'collapsed'">
+        <Label class="new-msg link"
+            text="Add new routine" 
+            (tap)="newTask()" 
+            textWrap="true"></Label>
+    </StackLayout>
 </StackLayout>
