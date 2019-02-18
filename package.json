@@ -50,6 +50,7 @@
         "nativescript-vibrate": "^2.1.0",
         "reflect-metadata": "0.1.12",
         "rxjs": "6.2.0",
+        "tns": "^0.2.0",
         "tns-core-modules": "4.1.0",
         "zone.js": "0.8.26"
     },
